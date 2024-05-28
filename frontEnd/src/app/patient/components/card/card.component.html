@@ -5,6 +5,8 @@
   </mat-card-header>
 
   <!-- TODO: Imagen  -->
+  {{ patient | patientImage }}
+  <img mat-card-image [src]="patient | patientImage" [alt]="patient.superhero">
 
   <mat-card-content class="mt-2">
     <h4>{{ patient.publisher }}</h4>
