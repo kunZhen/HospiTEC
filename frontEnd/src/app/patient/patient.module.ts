@@ -8,6 +8,7 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { ListPageComponent } from './pages/list-page/list-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { PatientPageComponent } from './pages/patient-page/patient-page.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { PatientPageComponent } from './pages/patient-page/patient-page.componen
     LayoutPageComponent,
     ListPageComponent,
     SearchPageComponent,
-    PatientPageComponent
+    PatientPageComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,
