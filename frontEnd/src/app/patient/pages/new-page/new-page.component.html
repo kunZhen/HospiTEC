@@ -1,7 +1,6 @@
 <h1>
   Editar / Agregar
-  Paciente
-  <small>Superman</small>
+  <small>Paciente</small>
 </h1>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -14,36 +13,20 @@
 
         <div class="grid">
 
-          <mat-form-field class="col-12 sm:col-6">
-            <mat-label>Super héroe</mat-label>
-            <input
-              matInput
-              type="text"
-              required
-            />
-          </mat-form-field>
-
-          <mat-form-field class="col-12 sm:col-6">
-            <mat-label>Alter ego</mat-label>
-            <input
-              matInput
-              type="text"
-              required
-            />
-          </mat-form-field>
-
-
           <mat-form-field class="col-12">
-            <mat-label>Primera aparición</mat-label>
+            <mat-label>Identificación</mat-label>
             <input
               matInput
               type="text"
               required
+              maxlength="9"
+              pattern="\d*"
+              inputmode="numeric"
             />
           </mat-form-field>
 
           <mat-form-field class="col-12">
-            <mat-label>Personajes</mat-label>
+            <mat-label>Nombre</mat-label>
             <input
               matInput
               type="text"
@@ -51,12 +34,89 @@
             />
           </mat-form-field>
 
-          <mat-form-field color="accent">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Primer apellido</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Segundo apellido</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Teléfono principal</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              maxlength="8"
+              pattern="\d*"
+              inputmode="numeric"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Teléfono secundario</mat-label>
+            <input
+              matInput
+              type="text"
+              maxlength="8"
+              pattern="\d*"
+              inputmode="numeric"
+            />
+          </mat-form-field>
+
+          <br>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Correo</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Dirección</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+            />
+          </mat-form-field>
+
+          <mat-form-field color="accent" class="col-12">
             <mat-label>Fecha de nacimiento</mat-label>
             <input matInput [matDatepicker]="picker1">
             <mat-hint>MM/DD/YYYY</mat-hint>
             <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
             <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Patologías</mat-label>
+            <input
+              matInput
+              type="text"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Tratamiento</mat-label>
+            <input
+              matInput
+              type="text"
+            />
           </mat-form-field>
 
           <mat-form-field class="col-12">
