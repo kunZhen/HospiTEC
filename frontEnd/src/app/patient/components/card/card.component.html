@@ -1,20 +1,23 @@
 <mat-card>
   <mat-card-header>
-    <mat-card-title>{{ patient.superhero }}</mat-card-title>
-    <mat-card-title>{{ patient.alter_ego }}</mat-card-title>
+    <mat-card-title>{{ patient.name }}</mat-card-title>
+    <mat-card-title>{{ patient.firstLastName }} {{ patient.secondLastName }}</mat-card-title>
   </mat-card-header>
 
   <!-- TODO: Imagen  -->
-  {{ patient | patientImage }}
-  <img mat-card-image [src]="patient | patientImage" [alt]="patient.superhero">
+  <!-- {{ patient | patientImage }} -->
+  <img mat-card-image [src]="patient | patientImage" [alt]="patient.name">
 
   <mat-card-content class="mt-2">
-    <h4>{{ patient.publisher }}</h4>
+    <h4>Identificación: {{ patient.id }}</h4>
     <p>
-      <strong> Primer aparición </strong> {{ patient.first_appearance }}
+      <strong> Correo </strong> {{ patient.email }}
+      <br>
+      <strong> Teléfono </strong> {{ patient.firstPhoneNumber }}
+      <strong *ngIf="patient.secondPhoneNumber"> - </strong> {{ patient.secondPhoneNumber }}
       <br>
       <mat-chip-listbox>
-        <mat-chip *ngFor="let name of patient.characters.split(',') | slice:0:3">
+        <mat-chip *ngFor="let name of patient.patology.split(',') | slice:0:3">
           {{ name }}
         </mat-chip>
       </mat-chip-listbox>

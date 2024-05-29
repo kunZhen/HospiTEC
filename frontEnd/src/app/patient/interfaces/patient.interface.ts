@@ -1,14 +1,14 @@
 export interface Patient {
-  id:               string;
-  superhero:        string;
-  publisher:        Publisher;
-  alter_ego:        string;
-  first_appearance: string;
-  characters:       string;
-  alt_img?:         string;
-}
-
-export enum Publisher {
-  DCComics = "DC Comics",
-  MarvelComics = "Marvel Comics",
+  id:                number;
+  name:              string;
+  firstLastName:     string;
+  secondLastName:    string;
+  firstPhoneNumber:  string;
+  secondPhoneNumber: string;
+  email:             string;
+  address:           string;
+  birthDate:         Date;
+  patology:          string;
+  treatment:         string;
+  alt_img?:          string;
 }

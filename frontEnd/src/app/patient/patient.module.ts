@@ -10,6 +10,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { PatientPageComponent } from './pages/patient-page/patient-page.component';
 import { CardComponent } from './components/card/card.component';
 import { PatientImagePipe } from './pipes/patient-image.pipe';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PatientDatePipe } from './pipes/patient-date.pipe';
 
 
 @NgModule({
@@ -22,12 +24,14 @@ import { PatientImagePipe } from './pipes/patient-image.pipe';
     CardComponent,
 
     // Pipes
-    PatientImagePipe
+    PatientImagePipe,
+     PatientDatePipe
   ],
   imports: [
     CommonModule,
     PatientRoutingModule,
-    MaterialModule
+    MaterialModule,
+    ReactiveFormsModule
   ]
 })
 export class PatientModule { }
