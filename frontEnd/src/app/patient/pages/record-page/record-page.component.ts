@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { PatientService } from '../../services/patient.service';
 import { Record } from '../../interfaces/record.interface';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -10,7 +10,7 @@ import { RecordService } from '../../services/record.service';
   templateUrl: './record-page.component.html',
   styleUrls: ['./record-page.component.css']
 })
-export class RecordPageComponent {
+export class RecordPageComponent implements OnInit {
 
   public records: Record[] = [];
 

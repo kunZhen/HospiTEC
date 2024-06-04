@@ -29,20 +29,24 @@ export class LoginPageComponent {
     const { email, password } = this.loginForm.value;
 
     if ( email?.endsWith('@ccss.sa.cr') ) {
-      console.log('CCSS');
+      this.authService.logInDoctor(email!, password!).subscribe( success => {
+        if (success) {
+          this.router.navigate(['/patient']);
+        } else {
+          console.log('Login failed');
+        }
+      });
     } else if ( email?.endsWith('@admin.sa.cr')) {
       console.log('ADMINISTRADOR');
     } else {
-      console.log('PACIENTE');
+      this.authService.logInPatient(email!, password!).subscribe( success => {
+        if (success) {
+          this.router.navigate(['/patient-user']);
+        } else {
+          console.log('Login failed');
+        }
+      });
     }
-
-    this.authService.login(email!, password!).subscribe( success => {
-      if (success) {
-        this.router.navigate(['/patient']);
-      } else {
-        console.log('Login failed');
-      }
-    });
 
   }
 

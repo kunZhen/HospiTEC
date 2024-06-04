@@ -1,1 +1,15 @@
-<p>record-page works!</p>
+<h1 >
+  <strong> Historial clínico </strong>
+</h1>
+
+<h4 *ngIf="!showTittle">Este paciente no cuenta con historial clínico</h4>
+
+<div class="grid bm-8 pt-2">
+
+  <div *ngFor="let record of records"
+    class="col-12 sm:col-4 md:col-3 xl:col-2">
+    <records-record-card [record]="record"></records-record-card>
+    <!-- {{record.id}} -->
+  </div>
+
+</div>

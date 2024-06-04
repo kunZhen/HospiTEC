@@ -22,8 +22,23 @@ export class AuthService {
     return structuredClone(this.user);
   }
 
-  login(email: string, password: string): Observable<boolean> {
+  logInDoctor(email: string, password: string): Observable<boolean> {
     const url = `${this.baseUrl}/doctor?email=${email}&password=${password}`;
+
+    return this.http.get<User[]>(url)
+      .pipe(
+        tap(users => {
+          if (users.length > 0) {
+            this.user = users[0];
+            localStorage.setItem('token', this.user.id);
+          }
+        }),
+        map(users => users.length > 0)
+      );
+  }
+
+  logInPatient(email: string, password: string) {
+    const url = `${this.baseUrl}/patients?email=${email}&password=${password}`;
 
     return this.http.get<User[]>(url)
       .pipe(
@@ -40,6 +55,10 @@ export class AuthService {
   logout() {
     this.user = undefined;
     localStorage.clear();
+  }
+
+  get token(): string | null {
+    return localStorage.getItem('token');
   }
 
 
