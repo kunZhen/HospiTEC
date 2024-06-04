@@ -1,70 +1,95 @@
-<section class="h-100 gradient-form" style="background-color: #eee; background-color: white;">
-  <div class="container py-5 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-xl-10">
-        <div class="card rounded-3 text-black">
-          <div class="row g-0">
-            <div class="col-lg-6">
-              <div class="card-body p-md-5 mx-md-4">
+<ng-template #divLoading>
+  <mat-grid-list cols="1" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
 
-                <div class="text-center">
-                  <img src="https://cdn.pixabay.com/photo/2017/03/13/23/31/icon-2141485_1280.png"
-                    style="width: 185px;" alt="logo">
-                  <!-- <h4 class="mt-1 mb-5 pb-1">Lab CE</h4> -->
-                </div>
-
-                <!-- Formulario para ingresar al DataBase
-                Se relaciona con el loginForm y al aplicar el submit se llama a la función
-                onSubmit() -->
-                <form autocomplete="off" >
-                  <p>Ingresa a tu cuenta</p>
-
-                  <div class="form-outline mb-4">
-                    <input type="email" id="form2Example11" class="form-control" placeholder="Correo" formControlName="email"/>
-                    <span class="form-text text-danger">
-                      Este campo es requerido
-                    </span>
-                  </div>
-
-                  <div class="form-outline mb-4">
-                    <input type="password" id="form2Example22" class="form-control" placeholder="Contraseña" formControlName="password"/>
-                    <span class="form-text text-danger">
-                      Este campo es requerido
-                  </span>
-                  </div>
-
-                  <div class="text-center d-flex-space-between pt-1 mb-5 pb-1">
-                    <!-- <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="regresar()">Regresar</button> -->
-                    <button class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" type="submit">Iniciar sesión</button>
-                  </div>
-
-
-
-
-                  <!-- <div class="d-flex align-items-center justify-content-center pb-4">
-                    <p class="mb-0 me-2">Don't have an account?</p>
-                    <button type="button" class="btn btn-outline-danger" routerLink="/register">Create new</button>
-
-                  </div> -->
-
-                </form>
-
-              </div>
-            </div>
-            <div class="col-lg-6 d-flex align-items-center gradient-custom-2" style="background-image: url('https://i.gifer.com/DVYt.gif');">
-              <div class="text-white px-3 py-4 p-md-5 mx-md-4" >
-                <!-- <img
-                  src="https://media.discordapp.net/attachments/1116854585361965139/1116860583896158228/3dd4fdcd69a2858b06bd01be9ea3c531.png?width=354&height=531"
-                  class="w-100 rounded-4 shadow-4" alt="" /> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<div *ngIf="record; else divLoading" class="grid p-2">
+  <div class="col-12">
   </div>
-</section>
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+    </mat-card-header>
+
+    <img src="assets\medical-procedure.png" [alt]="record.id" mat-card-image />
+
+  </mat-card>
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Evaluación del servicio recibido</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h2>{{ record.procedure[0].name }} - {{ record.date | date: 'MM/dd/yyyy' }}</h2>
+        <h3>{{ record.procedure[0].description }}</h3>
+      </mat-card-subtitle>
+
+      <mat-card-subtitle>
+        <h2>{{ record.procedure[0] }}</h2>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <mat-toolbar color="primary">
+        <span>Detalles de la evaluación</span>
+        <mat-icon *ngFor="let star of maxRatingArray; let i = index"
+          (mouseenter)="setRating(i)"
+          [ngClass]="{checked: selectedStar > i}"
+        >star</mat-icon>
+      </mat-toolbar>
+      <mat-list>
+
+        <mat-list-item>
+          <strong>Fecha:</strong>
+          {{ record.date| date: 'MM/dd/yyyy'}}
+        </mat-list-item>
+
+        <mat-list-item>
+          <strong>Descripción:</strong>
+          {{ record.procedure[0].description }}
+        </mat-list-item>
 
 
 
+        <br>
 
+        <!-- <strong *ngIf="patient.patology">Patologías:</strong>
+        <mat-chip-listbox *ngIf="patient.patology">
+          <mat-chip *ngFor="let name of patient.patology.split(',')">
+            {{ name }}
+          </mat-chip>
+        </mat-chip-listbox>
+
+        <strong *ngIf="patient.treatment">Tratamiento:</strong>
+        <mat-chip-listbox *ngIf="patient.treatment">
+          <mat-chip *ngFor="let name of patient.treatment.split(',')">
+            {{ name }}
+          </mat-chip>
+        </mat-chip-listbox> -->
+
+      </mat-list>
+
+      <button
+        mat-button
+        color="warn"
+        (click)="goBack()"
+      >
+        Regresar
+      </button>
+
+    </mat-card-content>
+
+
+  </mat-card>
+
+  <!-- <list-record-page></list-record-page> -->
+
+
+</div>
