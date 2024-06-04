@@ -30,7 +30,15 @@ export class RecordPageComponent implements OnInit {
       records => {
         this.records = records!;
         console.log(this.records);
+
+        if (this.records.length > 0) {
+          this.showTittle = true;
+        } else {
+          this.showTittle = false;
+        }
       }
+
+
     );
   }
 

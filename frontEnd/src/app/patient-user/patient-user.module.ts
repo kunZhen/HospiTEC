@@ -9,6 +9,7 @@ import { RecordPageComponent } from './pages/record-page/record-page.component';
 import { NewReservationPageComponent } from './pages/new-reservation-page/new-reservation-page.component';
 import { ReservationPageComponent } from './pages/reservation-page/reservation-page.component';
 import { RecordCardComponent } from './components/record-card/record-card.component';
+import { GradePageComponent } from './pages/grade-page/grade-page.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { RecordCardComponent } from './components/record-card/record-card.compon
     RecordPageComponent,
     NewReservationPageComponent,
     ReservationPageComponent,
-    RecordCardComponent
+    RecordCardComponent,
+    GradePageComponent
   ],
   imports: [
     CommonModule,
