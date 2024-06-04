@@ -4,6 +4,9 @@
     <mat-card-title></mat-card-title>
   </mat-card-header>
 
+  <!-- TODO: Imagen  -->
+  <!-- {{ patient | patientImage }} -->
+  <img mat-card-image src="assets\medical-procedure.png" [alt]="record.id">
 
   <mat-card-content class="mt-2">
     <h4> Fecha: {{ record.date | date: 'MM/dd/yyyy' }} </h4>

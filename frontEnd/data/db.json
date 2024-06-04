@@ -289,7 +289,7 @@
     {
       "id": "2",
       "patientId": 123456789,
-      "date": "2004-01-16T06:00:00.000Z",
+      "date": "2004-01-08T06:00:00.000Z",
       "procedure": [
         {
           "name": "Desparasitación",
@@ -315,7 +315,7 @@
       "procedure": [
         {
           "name": "Limpieza dental",
-          "description": "Limpieza y revisión dental"
+          "description": "Limpieza y revisión dental. Calzas nuevas"
         }
       ]
     },
