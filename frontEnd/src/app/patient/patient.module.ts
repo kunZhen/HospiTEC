@@ -12,6 +12,8 @@ import { CardComponent } from './components/card/card.component';
 import { PatientImagePipe } from './pipes/patient-image.pipe';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PatientDatePipe } from './pipes/patient-date.pipe';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { RecordPageComponent } from './pages/record-page/record-page.component';
 
 
 @NgModule({
@@ -25,7 +27,9 @@ import { PatientDatePipe } from './pipes/patient-date.pipe';
 
     // Pipes
     PatientImagePipe,
-     PatientDatePipe
+     PatientDatePipe,
+     ConfirmDialogComponent,
+     RecordPageComponent
   ],
   imports: [
     CommonModule,

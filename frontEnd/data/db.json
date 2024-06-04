@@ -8,20 +8,6 @@
   ],
   "patients": [
     {
-      "id": 789262356,
-      "name": "Maria",
-      "firstLastName": "Sanchez",
-      "secondLastName": "Martinez",
-      "firstPhoneNumber": "88954589",
-      "secondPhoneNumber": "88569636",
-      "email": "maria.sanchez@gmail.com",
-      "password": "1234",
-      "address": "Calle 1",
-      "birthDate": "1990-01-01",
-      "patology": "Diabetes, Hipertension, Cancer",
-      "treatment": "Insulina, Metformina, Quimioterapia"
-    },
-    {
       "id": 123456789,
       "name": "Carlos",
       "firstLastName": "Perez",
@@ -31,7 +17,7 @@
       "email": "carlos.perez@gmail.com",
       "password": "1234",
       "address": "Calle 2",
-      "birthDate": "1985-05-12",
+      "birthDate": "1985-05-02T06:00:00.000Z",
       "patology": "Asma, Alergias",
       "treatment": "Inhaladores, Antihistamínicos"
     },
@@ -45,7 +31,7 @@
       "email": "lucia.rodriguez@gmail.com",
       "password": "1234",
       "address": "Calle 3",
-      "birthDate": "1995-07-23",
+      "birthDate": "1995-07-04T06:00:00.000Z",
       "patology": "Hipertension",
       "treatment": "Beta bloqueadores"
     },
@@ -59,13 +45,13 @@
       "email": "miguel.fernandez@gmail.com",
       "password": "1234",
       "address": "Calle 4",
-      "birthDate": "1978-11-02",
+      "birthDate": "1978-11-15T06:00:00.000Z",
       "patology": "Diabetes",
       "treatment": "Insulina"
     },
     {
       "id": 102938475,
-      "name": "Ana",
+      "name": "Juan",
       "firstLastName": "Gomez",
       "secondLastName": "Hernandez",
       "firstPhoneNumber": "88335577",
@@ -73,7 +59,7 @@
       "email": "ana.gomez@gmail.com",
       "password": "1234",
       "address": "Calle 5",
-      "birthDate": "2000-03-15",
+      "birthDate": "2000-03-02T06:00:00.000Z",
       "patology": "Epilepsia",
       "treatment": "Anticonvulsivos"
     },
@@ -87,7 +73,7 @@
       "email": "pedro.ramirez@gmail.com",
       "password": "1234",
       "address": "Calle 6",
-      "birthDate": "1982-08-21",
+      "birthDate": "1982-08-13T06:00:00.000Z",
       "patology": "Artritis",
       "treatment": "Analgesicos, Anti-inflamatorios"
     },
@@ -101,7 +87,7 @@
       "email": "laura.torres@gmail.com",
       "password": "1234",
       "address": "Calle 7",
-      "birthDate": "1993-12-11",
+      "birthDate": "1993-12-15T06:00:00.000Z",
       "patology": "Migraña",
       "treatment": "Triptanes, Analgesicos"
     },
@@ -115,13 +101,13 @@
       "email": "javier.gonzalez@gmail.com",
       "password": "1234",
       "address": "Calle 8",
-      "birthDate": "1975-04-05",
+      "birthDate": "1975-04-17T06:00:00.000Z",
       "patology": "Hipertension, Colesterol alto",
       "treatment": "Estatinas, Inhibidores ECA"
     },
     {
       "id": 564738192,
-      "name": "Sofia",
+      "name": "Diego",
       "firstLastName": "Lopez",
       "secondLastName": "Vargas",
       "firstPhoneNumber": "88996677",
@@ -129,13 +115,13 @@
       "email": "sofia.lopez@gmail.com",
       "password": "1234",
       "address": "Calle 9",
-      "birthDate": "1998-10-27",
+      "birthDate": "1998-10-08T06:00:00.000Z",
       "patology": "Asma",
       "treatment": "Inhaladores, Corticoides"
     },
     {
       "id": 475869302,
-      "name": "Jose",
+      "name": "Lorena",
       "firstLastName": "Martinez",
       "secondLastName": "Pena",
       "firstPhoneNumber": "88338844",
@@ -143,11 +129,105 @@
       "email": "jose.martinez@gmail.com",
       "password": "1234",
       "address": "Calle 10",
-      "birthDate": "1987-03-18",
+      "birthDate": "1987-03-05T06:00:00.000Z",
       "patology": "Gastritis",
       "treatment": "Antiácidos, Inhibidores de la bomba de protones"
+    },
+    {
+      "id": "969666666",
+      "name": "jghjghjg",
+      "firstLastName": "hjghjghj",
+      "secondLastName": "ghjghj",
+      "firstPhoneNumber": "31231313",
+      "secondPhoneNumber": "35135131",
+      "email": "calle@gmail.com",
+      "address": "dffgdgdf",
+      "birthDate": "2003-12-18T06:00:00.000Z",
+      "patology": "PAto",
+      "treatment": "dsadasd"
+    },
+    {
+      "id": "656565253",
+      "name": "fsdfsd",
+      "firstLastName": "dsfdsf",
+      "secondLastName": "dsfsdf",
+      "firstPhoneNumber": "78578525",
+      "secondPhoneNumber": "57575787",
+      "email": "k@gmail.com",
+      "address": "dsfsdf",
+      "birthDate": "2004-01-01T00:00:00.000Z",
+      "patology": "",
+      "treatment": "",
+      "alt_img": "no-image"
+    },
+    {
+      "id": "798798789",
+      "name": "gdfgdfg",
+      "firstLastName": "fgdfgdf",
+      "secondLastName": "fdgvd",
+      "firstPhoneNumber": "66876986",
+      "secondPhoneNumber": "86868976",
+      "email": "l@gmai.com",
+      "address": "dfsfsd",
+      "birthDate": "2003-12-16T06:00:00.000Z",
+      "patology": "",
+      "treatment": "",
+      "alt_img": "no-image"
     }
   ],
+  "record": [
+    {
+      "id": "123456789",
+      "date": "2003-12-16T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Vacunación antirrábica",
+          "description": "Aplicación de vacuna contra la rabia"
+        }
+      ]
+    },
+    {
+      "id": "123456789",
+      "date": "2004-01-10T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Desparasitación",
+          "description": "Administración de antiparasitarios"
+        }
+      ]
+    },
+    {
+      "id": "123456789",
+      "date": "2004-02-20T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Chequeo general",
+          "description": "Examen físico completo"
+        }
+      ]
+    },
+    {
+      "id": "123456789",
+      "date": "2004-03-15T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Limpieza dental",
+          "description": "Limpieza y revisión dental"
+        }
+      ]
+    },
+    {
+      "id": "123456789",
+      "date": "2004-04-10T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugía menor",
+          "description": "Extracción de cuerpo extraño"
+        }
+      ]
+    }
+  ],
+
   "heroes": [
     {
       "id": "dc-batman",

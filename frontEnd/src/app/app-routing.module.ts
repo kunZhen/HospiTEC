@@ -11,6 +11,10 @@ const routes: Routes = [
     path: 'patient',
     loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule)
   },
+  // {
+  //   path: 'doctor',
+  //   loadChildren: () => import('./doctor/doctor.module').then(m => m.DoctorModule)
+  // },
   {
     path: '404',
     component: Error404PageComponent

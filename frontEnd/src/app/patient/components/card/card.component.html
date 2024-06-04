@@ -16,7 +16,7 @@
       <strong> Teléfono </strong> {{ patient.firstPhoneNumber }}
       <strong *ngIf="patient.secondPhoneNumber"> - </strong> {{ patient.secondPhoneNumber }}
       <br>
-      <mat-chip-listbox>
+      <mat-chip-listbox *ngIf="patient.patology">
         <mat-chip *ngFor="let name of patient.patology.split(',') | slice:0:3">
           {{ name }}
         </mat-chip>

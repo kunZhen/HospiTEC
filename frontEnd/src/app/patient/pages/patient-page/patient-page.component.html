@@ -37,7 +37,7 @@
 
         <mat-list-item>
           <strong>Fecha de nacimiento:</strong>
-          {{ patient.birthDate }}
+          {{ patient.birthDate | date: 'MM/dd/yyyy'}}
         </mat-list-item>
 
         <mat-list-item>
@@ -57,15 +57,15 @@
 
         <br>
 
-        <strong>Patologías:</strong>
-        <mat-chip-listbox>
+        <strong *ngIf="patient.patology">Patologías:</strong>
+        <mat-chip-listbox *ngIf="patient.patology">
           <mat-chip *ngFor="let name of patient.patology.split(',')">
             {{ name }}
           </mat-chip>
         </mat-chip-listbox>
 
-        <strong>Tratamiento:</strong>
-        <mat-chip-listbox>
+        <strong *ngIf="patient.treatment">Tratamiento:</strong>
+        <mat-chip-listbox *ngIf="patient.treatment">
           <mat-chip *ngFor="let name of patient.treatment.split(',')">
             {{ name }}
           </mat-chip>
