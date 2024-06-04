@@ -26,14 +26,14 @@ import { NewRecordPageComponent } from './pages/new-record-page/new-record-page.
     SearchPageComponent,
     PatientPageComponent,
     CardComponent,
+    ConfirmDialogComponent,
+    RecordPageComponent,
+    RecordCardComponent,
+    NewRecordPageComponent,
 
     // Pipes
     PatientImagePipe,
-     PatientDatePipe,
-     ConfirmDialogComponent,
-     RecordPageComponent,
-     RecordCardComponent,
-     NewRecordPageComponent
+    PatientDatePipe
   ],
   imports: [
     CommonModule,

@@ -8,14 +8,20 @@ const routes: Routes = [
   {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
-    canActivate: [PublicGuard],
-    canMatch: [PublicGuard]
+    // canActivate: [PublicGuard],
+    // canMatch: [PublicGuard]
   },
   {
     path: 'patient',
     loadChildren: () => import('./patient/patient.module').then(m => m.PatientModule),
-    canActivate: [AuthGuard],
-    canMatch: [AuthGuard]
+    // canActivate: [AuthGuard],
+    // canMatch: [AuthGuard]
+  },
+  {
+    path: 'patient-user',
+    loadChildren: () => import('./patient-user/patient-user.module').then(m => m.PatientUserModule),
+    // canActivate: [AuthGuard],
+    // canMatch: [AuthGuard]
   },
   // {
   //   path: 'doctor',
