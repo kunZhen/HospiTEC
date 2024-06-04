@@ -15,11 +15,12 @@ export class PatientImagePipe implements PipeTransform {
 
     if ( patient.alt_img ) return `assets/patient/${ patient.alt_img }.png`;
 
-    if ( patient.alt_img === null ) return `assets/patient/no-image.png`;
 
     if ( patient.id ) {
       return `assets/patient/${ patient.id }.jpg`;
     }
+
+    if ( patient.alt_img === null ) return `assets/patient/no-image.png`;
     // return `assets/patient/no-image.png`;
     return `assets/patient/no-image.png`;
 

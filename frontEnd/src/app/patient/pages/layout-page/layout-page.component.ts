@@ -7,10 +7,11 @@ import { Component } from '@angular/core';
 })
 export class LayoutPageComponent {
 
-  // Rutas definidas en routing anteriormente 
+  // Rutas definidas en routing anteriormente
   public sidebarItems = [
     { label: 'Listado', icon: 'label', url: './list'},
-    { label: 'Añadir', icon: 'add', url: './new-patient'},
+    { label: 'Añadir paciente', icon: 'add', url: './new-patient'},
+    { label: 'Añadir hoja clínica', icon: 'add', url: './new-record'},
     { label: 'Buscar', icon: 'search', url: './search'},
   ]
 

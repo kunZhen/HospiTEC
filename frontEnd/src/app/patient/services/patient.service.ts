@@ -30,7 +30,6 @@ export class PatientService {
       );
   }
 
-
   getSuggestions(query: string): Observable<Patient[]>{
     return this.http.get<Patient[]>(`${this.baseUrl}/patients`)
         .pipe(
@@ -59,5 +58,7 @@ export class PatientService {
         map(resp => true)
       );
   }
+
+
 
 }
