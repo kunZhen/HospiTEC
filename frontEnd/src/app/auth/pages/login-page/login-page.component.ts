@@ -28,6 +28,14 @@ export class LoginPageComponent {
 
     const { email, password } = this.loginForm.value;
 
+    if ( email?.endsWith('@ccss.sa.cr') ) {
+      console.log('CCSS');
+    } else if ( email?.endsWith('@admin.sa.cr')) {
+      console.log('ADMINISTRADOR');
+    } else {
+      console.log('PACIENTE');
+    }
+
     this.authService.login(email!, password!).subscribe( success => {
       if (success) {
         this.router.navigate(['/patient']);

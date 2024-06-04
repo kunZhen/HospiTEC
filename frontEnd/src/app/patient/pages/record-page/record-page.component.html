@@ -1,16 +1,16 @@
 <br>
 <br>
 
-<!--
-<mat-toolbar color="primary" class="mat-align-center" *ngIf="showTittle">
-  <h1>
-    <strong> Historial clínico </strong>
-  </h1>
-</mat-toolbar>
+<h1 >
+  <strong> Historial clínico </strong>
+</h1>
 
-<mat-divider></mat-divider> -->
+<h4 *ngIf="!showTittle">Este paciente no cuenta con historial clínico</h4>
+
+<mat-divider></mat-divider>
 
 <div class="grid bm-8 pt-2">
+
 
   <div *ngFor="let record of records"
     class="col-12 sm:col-4 md:col-3 xl:col-2">
