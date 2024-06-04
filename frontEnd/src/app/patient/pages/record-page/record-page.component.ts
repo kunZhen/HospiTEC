@@ -20,27 +20,21 @@ export class RecordPageComponent {
                 private recordService: RecordService
    ) { }
 
+  showTittle: boolean = false;
+
   ngOnInit(): void {
-    // this.activatedRoute.params
-    //   .pipe(
-    //     switchMap( ({ id }) => this.patientService.getRecordsByPatientId(id) )
-    //   )
-    //   .subscribe( records => {
-    //     this.records = records!;
-    //   });
-    // t/his.activatedRoute.params.pipe(switchMap( ({ id }) => console.log(id) ));
-
-    // this.recordService.getRecordsByPatientId("123456789").subscribe( records => {
-    //   this.records = records!;
-    //   console.log(this.records);
-    // });
-
     this.activatedRoute.params
     .pipe(
       switchMap( ({id}) => this.recordService.getRecordsByPatientId(id) )
     )
     .subscribe( records => {
       this.records = records!;
+
+      if (this.records.length > 0) {
+        this.showTittle = true;
+      } else {
+        this.showTittle = false;
+      }
     });
   }
 

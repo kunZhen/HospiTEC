@@ -5,6 +5,7 @@ import { Record } from '../../interfaces/record.interface';
 import { ActivatedRoute, Router } from '@angular/router';
 import { RecordService } from '../../services/record.service';
 import { switchMap } from 'rxjs';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-new-record-page',
@@ -17,7 +18,8 @@ export class NewRecordPageComponent implements OnInit {
                 private fb: FormBuilder,
                 private activatedRoute: ActivatedRoute,
                 private router: Router,
-                private recordService: RecordService
+                private recordService: RecordService,
+                private snackbar: MatSnackBar,
    ) { }
 
   ngOnInit(): void {
@@ -33,6 +35,8 @@ export class NewRecordPageComponent implements OnInit {
     .subscribe( record => {
 
       if (!record) return this.router.navigate(['/patients']);
+
+      this.recordId = record.id;
 
       this.recordForm.patchValue(
         {
@@ -50,6 +54,7 @@ export class NewRecordPageComponent implements OnInit {
   }
 
   currentRecordToUpdate: Boolean = false;
+  recordId: string = '';
 
   public recordForm = this.fb.group({
     patientId: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9)]],
@@ -59,7 +64,7 @@ export class NewRecordPageComponent implements OnInit {
   });
 
 
-  get currenRecord(): Record {
+  get currentRecord(): Record {
     const record = this.recordForm.value as unknown as Record;
 
     return record;
@@ -72,20 +77,52 @@ export class NewRecordPageComponent implements OnInit {
     }
 
     if (this.currentRecordToUpdate) {
-      this.recordService.updateRecord(this.currenRecord).subscribe( record => {
-        console.log(record);
+      const updateRecord = {
+        id: this.recordId,
+        patientId: this.currentRecord.patientId,
+        date: this.currentRecord.date,
+        procedure: [
+          {
+            name: this.recordForm.value.procedureName!,
+            description: this.recordForm.value.procedureDescription!
+          }
+        ]
+      }
+
+      this.recordService.updateRecord(updateRecord).subscribe( record => {
+        this.showSnackbar( `${ record.patientId } actualizado` );
+        this.router.navigate(['/patient', record.patientId]);
       });
 
       return;
     }
-    
-    this.recordService.addRecord(this.currenRecord).subscribe( record => {
-      console.log(record);
+
+    const newRecord = {
+      id: Math.floor(Math.random() * 1000).toString(),
+      patientId: this.currentRecord.patientId,
+      date: this.currentRecord.date,
+      procedure: [
+        {
+          name: this.recordForm.value.procedureName!,
+          description: this.recordForm.value.procedureDescription!
+        }
+      ]
+    }
+
+    this.recordService.addRecord(newRecord).subscribe( record => {
+      this.router.navigate(['/patient', record.patientId]);
+      this.showSnackbar( `${ record.patientId } creado` );
     });
   }
 
   onDeleteRecord() {
 
+  }
+
+  showSnackbar(message: string): void {
+    this.snackbar.open(message, 'Entendido', {
+      duration: 2500
+    });
   }
 
 }

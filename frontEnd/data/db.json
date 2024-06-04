@@ -6,6 +6,118 @@
       "email": "john.due@gmail.com"
     }
   ],
+  "doctor": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "firstLastName": "Perez",
+      "secondLastName": "Lopez",
+      "email": "john.due@gmail.com",
+      "password": "1234",
+      "address": "Calle 1",
+      "firstPhoneNumber": "88776655",
+      "secondPhoneNumber": "88447788"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "firstLastName": "Garcia",
+      "secondLastName": "Rodriguez",
+      "email": "jane.smith@hospital.com",
+      "password": "doctor123",
+      "address": "Main Street 123",
+      "firstPhoneNumber": "5551234567",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 3,
+      "name": "Michael Williams",
+      "firstLastName": "Hernandez",
+      "secondLastName": "Diaz",
+      "email": "michael.williams@clinic.org",
+      "password": "heal2024",
+      "address": "Maple Avenue 456",
+      "firstPhoneNumber": "5557890123",
+      "secondPhoneNumber": "5554567890"
+    },
+    {
+      "id": 4,
+      "name": "Ashley Miller",
+      "firstLastName": "Lee",
+      "secondLastName": "Kim",
+      "email": "ashley.miller@md.com",
+      "password": "care4you",
+      "address": "Park Lane 789",
+      "firstPhoneNumber": "5550987654",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 5,
+      "name": "David Johnson",
+      "firstLastName": "Wang",
+      "secondLastName": "Chen",
+      "email": "david.johnson@healthcare.net",
+      "password": "doctorDJ",
+      "address": "Elm Street 1011",
+      "firstPhoneNumber": "5552345678",
+      "secondPhoneNumber": "5559876543"
+    },
+    {
+      "id": 6,
+      "name": "Sarah Wilson",
+      "firstLastName": "Gonzalez",
+      "secondLastName": "Allen",
+      "email": "sarah.wilson@hospital.edu",
+      "password": "healthy123",
+      "address": "Birch Road 234",
+      "firstPhoneNumber": "5555678901",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 7,
+      "name": "Richard Moore",
+      "firstLastName": "Young",
+      "secondLastName": "Brown",
+      "email": "richard.moore@dr.com",
+      "password": "healthexpert",
+      "address": "Pine Street 567",
+      "firstPhoneNumber": "5551011123",
+      "secondPhoneNumber": "5553456789"
+    },
+    {
+      "id": 8,
+      "name": "Amanda Garcia",
+      "firstLastName": "Nelson",
+      "secondLastName": "Clark",
+      "email": "amanda.garcia@clinic.net",
+      "password": "carenow",
+      "address": "Oak Avenue 890",
+      "firstPhoneNumber": "5556789012",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 9,
+      "name": "Daniel Thomas",
+      "firstLastName": "Scott",
+      "secondLastName": "Mitchell",
+      "email": "daniel.thomas@md.edu",
+      "password": "doctorDT",
+      "address": "Spruce Street 1213",
+      "firstPhoneNumber": "5557890098",
+      "secondPhoneNumber": "5555678012"
+    },
+    {
+      "id": 10,
+      "name": "Jennifer Lopez",
+      "firstLastName": "Lewis",
+      "secondLastName": "Robinson",
+      "email": "jennifer.lopez@hospital.org",
+      "password": "healwithus",
+      "address": "Willow Street 1516",
+      "firstPhoneNumber": "5558901234",
+      "secondPhoneNumber": ""
+    }
+  ],
   "patients": [
     {
       "id": 123456789,
@@ -134,19 +246,6 @@
       "treatment": "Antiácidos, Inhibidores de la bomba de protones"
     },
     {
-      "id": "969666666",
-      "name": "jghjghjg",
-      "firstLastName": "hjghjghj",
-      "secondLastName": "ghjghj",
-      "firstPhoneNumber": "31231313",
-      "secondPhoneNumber": "35135131",
-      "email": "calle@gmail.com",
-      "address": "dffgdgdf",
-      "birthDate": "2003-12-18T06:00:00.000Z",
-      "patology": "PAto",
-      "treatment": "dsadasd"
-    },
-    {
       "id": "656565253",
       "name": "fsdfsd",
       "firstLastName": "dsfdsf",
@@ -190,7 +289,7 @@
     {
       "id": "2",
       "patientId": 123456789,
-      "date": "2004-01-10T06:00:00.000Z",
+      "date": "2004-01-16T06:00:00.000Z",
       "procedure": [
         {
           "name": "Desparasitación",
@@ -223,16 +322,37 @@
     {
       "id": "5",
       "patientId": 123456789,
-      "date": "2004-04-10T06:00:00.000Z",
+      "date": "2004-04-28T06:00:00.000Z",
       "procedure": [
         {
           "name": "Cirugía menor",
           "description": "Extracción de cuerpo extraño"
         }
       ]
+    },
+    {
+      "id": "397",
+      "patientId": "987654321",
+      "date": "2024-06-29T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugia menor",
+          "description": "Extraccion de muela de juicio"
+        }
+      ]
+    },
+    {
+      "id": "398",
+      "patientId": "987654321",
+      "date": "2024-06-29T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugia menor",
+          "description": "Extraccion de muela de juicio"
+        }
+      ]
     }
   ],
-
   "heroes": [
     {
       "id": "dc-batman",

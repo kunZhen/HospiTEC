@@ -41,6 +41,7 @@ export class RecordService {
   }
 
   updateRecord(record: Record): Observable<Record> {
+    console.log(record);
     const url = `${this.baseUrl}/records/${record.id}`;
 
     return this.http.put<Record>(url, record);
