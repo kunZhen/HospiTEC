@@ -146,7 +146,7 @@
     {
       "recordId": "1",
       "cleanlinessComment": "Hace falta limpiar varias zonas",
-      "cleanlinessRate": 3,
+      "cleanlinessRate": 5,
       "staffTreatmentComment": "Buen trato por parte del personal",
       "staffTreatmentRate": 5,
       "appointmentPunctualityComment": "Tardaron 10 minutos en atenderme",
@@ -396,6 +396,132 @@
       "name": "Electrocardiógrafos",
       "provider": "HeartBeat",
       "amount": 5
+    }
+  ],
+  "bed": [
+    {
+      "id": 1,
+      "salonNumber": 101,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 1,
+          "salonNumber": 101
+        },
+        {
+          "id": 2,
+          "salonNumber": 102
+        }
+      ],
+      "cui": "UCI"
+    },
+    {
+      "id": 2,
+      "salonNumber": 101,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 1,
+          "salonNumber": 101
+        }
+      ],
+      "cui": "UCI"
+    },
+    {
+      "id": 3,
+      "salonNumber": 102,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 2,
+          "salonNumber": 102
+        }
+      ],
+      "cui": "No"
+    },
+    {
+      "id": 4,
+      "salonNumber": 102,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 2,
+          "salonNumber": 102
+        }
+      ],
+      "cui": "No"
+    },
+    {
+      "id": 5,
+      "salonNumber": 103,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 3,
+          "salonNumber": 103
+        }
+      ],
+      "cui": "No"
+    },
+    {
+      "id": 6,
+      "salonNumber": 103,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 3,
+          "salonNumber": 103
+        }
+      ],
+      "cui": "No"
+    },
+    {
+      "id": 7,
+      "salonNumber": 104,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 4,
+          "salonNumber": 104
+        }
+      ],
+      "cui": "UCI"
+    },
+    {
+      "id": 8,
+      "salonNumber": 104,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 4,
+          "salonNumber": 104
+        }
+      ],
+      "cui": "UCI"
+    },
+    {
+      "id": 9,
+      "salonNumber": 105,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 5,
+          "salonNumber": 105
+        }
+      ],
+      "cui": "No"
+    },
+    {
+      "id": 10,
+      "salonNumber": 105,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 5,
+          "salonNumber": 105
+        }
+      ],
+      "cui": "No"
     }
   ],
   "records": [

@@ -26,7 +26,6 @@ export class NewEquipmentPageComponent implements OnInit {
   ) { }
 
   public equipmentForm = this.fb.group({
-    // id: [''],
     salonNumber: ['', [Validators.required]],
     name: ['', [Validators.required]],
     provider: ['', [Validators.required]],
@@ -80,7 +79,7 @@ export class NewEquipmentPageComponent implements OnInit {
 
       const equipment: Equipment = {
         ...this.currentEquipment,
-        id: parseInt(this.currentEquipmentId, 10) 
+        id: parseInt(this.currentEquipmentId, 10)
       };
 
       this.equipmentService.updateEquipment(equipment)

@@ -1,5 +1,12 @@
-export interface bed {
+export interface Bed {
+  id: number;
   salonNumber: number;
-  number: number;
+  bedNumber: number;
+  equipments: Equipment[];
   cui: string;
+}
+
+export interface Equipment {
+  id: number;
+  salonNumber: number;
 }

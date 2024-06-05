@@ -398,6 +398,68 @@
       "amount": 5
     }
   ],
+  "bed": [
+    {
+      "id": 1,
+      "salonNumber": 101,
+      "number": 1,
+      "cui": "UCI"
+    },
+    {
+      "id": 2,
+      "salonNumber": 101,
+      "number": 2,
+      "cui": "UCI"
+    },
+    {
+      "id": 3,
+      "salonNumber": 102,
+      "number": 1,
+      "cui": "No"
+    },
+    {
+      "id": 4,
+      "salonNumber": 102,
+      "number": 2,
+      "cui": "No"
+    },
+    {
+      "id": 5,
+      "salonNumber": 103,
+      "number": 1,
+      "cui": "No"
+    },
+    {
+      "id": 6,
+      "salonNumber": 103,
+      "number": 2,
+      "cui": "No"
+    },
+    {
+      "id": 7,
+      "salonNumber": 104,
+      "number": 1,
+      "cui": "UCI"
+    },
+    {
+      "id": 8,
+      "salonNumber": 104,
+      "number": 2,
+      "cui": "UCI"
+    },
+    {
+      "id": 9,
+      "salonNumber": 105,
+      "number": 1,
+      "cui": "No"
+    },
+    {
+      "id": 10,
+      "salonNumber": 105,
+      "number": 2,
+      "cui": "No"
+    }
+  ],
   "records": [
     {
       "id": "1",

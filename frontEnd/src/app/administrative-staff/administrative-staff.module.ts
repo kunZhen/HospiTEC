@@ -11,6 +11,9 @@ import { SalonCardComponent } from './components/salon-card/salon-card.component
 import { ListEquipmentPageComponent } from './pages/list-equipment-page/list-equipment-page.component';
 import { NewEquipmentPageComponent } from './pages/new-equipment-page/new-equipment-page.component';
 import { EquipmentCardComponent } from './components/equipment-card/equipment-card.component';
+import { NewBedPageComponent } from './pages/new-bed-page/new-bed-page.component';
+import { ListBedPageComponent } from './pages/list-bed-page/list-bed-page.component';
+import { BedCardComponent } from './components/bed-card/bed-card.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { EquipmentCardComponent } from './components/equipment-card/equipment-ca
     SalonCardComponent,
     ListEquipmentPageComponent,
     NewEquipmentPageComponent,
-    EquipmentCardComponent
+    EquipmentCardComponent,
+    NewBedPageComponent,
+    ListBedPageComponent,
+    BedCardComponent
   ],
   imports: [
     CommonModule,

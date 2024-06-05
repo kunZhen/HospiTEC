@@ -1,0 +1,12 @@
+
+<h1>Listado de camas</h1>
+<mat-divider></mat-divider>
+
+<div class="grid bm-8 pt-2">
+
+  <div *ngFor="let bed of beds"
+    class="col-12 sm:col-4 md:col-3 xl:col-2">
+    <beds-bed-card [bed]="bed"></beds-bed-card>
+  </div>
+
+</div>
