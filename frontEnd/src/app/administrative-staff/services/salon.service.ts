@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, catchError, of } from 'rxjs';
 import { environments } from 'src/environments/environments';
 import { Salon } from '../interfaces/salon.interface';
 
@@ -21,10 +21,13 @@ export class SalonService {
     return this.http.get<Salon[]>(url);
   }
 
-  getSalonById(id: number): Observable<Salon> {
+  getSalonById(id: string): Observable<Salon | undefined> {
     const url = `${this.baseUrl}/salon/${id}`;
 
-    return this.http.get<Salon>(url);
+    return this.http.get<Salon>(url)
+    .pipe(
+      catchError( error => of(undefined) )
+    );
   }
 
   createSalon(salon: Salon): Observable<Salon> {
@@ -34,7 +37,7 @@ export class SalonService {
   }
 
   updateSalon(salon: Salon): Observable<Salon> {
-    const url = `${this.baseUrl}/salon/${salon.number}`;
+    const url = `${this.baseUrl}/salon/${salon.id}`;
 
     return this.http.put<Salon>(url, salon);
   }

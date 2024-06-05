@@ -312,28 +312,28 @@
   ],
   "salon": [
       {
-        "number": 101,
+        "id": 101,
         "name": "Sala A",
         "capacity": 10,
         "type": "Mujeres",
         "floor": 1
       },
       {
-        "number": 102,
+        "id": 102,
         "name": "Sala B",
         "capacity": 8,
         "type": "Hombres",
         "floor": 2
       },
       {
-        "number": 103,
+        "id": 103,
         "name": "Sala C",
         "capacity": 12,
         "type": "Niños",
         "floor": 2
       },
       {
-        "number": 104,
+        "id": 104,
         "name": "Sala D",
         "capacity": 15,
         "type": "Mujeres",

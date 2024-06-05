@@ -1,5 +1,5 @@
 export interface Salon {
-  number: number;
+  id: number;
   name: string;
   capacity: number;
   type: string;

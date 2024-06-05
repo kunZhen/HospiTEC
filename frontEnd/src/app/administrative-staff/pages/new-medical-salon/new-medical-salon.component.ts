@@ -1,17 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SalonService } from '../../services/salon.service';
 import { Salon } from '../../interfaces/salon.interface';
+import { switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-new-medical-salon',
   templateUrl: './new-medical-salon.component.html',
   styleUrls: ['./new-medical-salon.component.css']
 })
-export class NewMedicalSalonComponent {
+export class NewMedicalSalonComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
@@ -22,21 +23,55 @@ export class NewMedicalSalonComponent {
     private dialog: MatDialog
  ) { }
 
+
   public salonForm = this.fb.group({
-    number: ['', Validators.required],
-    name: ['', Validators.required],
-    capacity: ['', Validators.required],
-    type: ['', Validators.required],
-    floor: ['', Validators.required],
+    id: ['', [Validators.required]],
+    name: ['', [Validators.required]],
+    capacity: ['', [Validators.required]],
+    type: ['', [Validators.required]],
+    floor: ['', [Validators.required]],
   });
 
   public types = [
-    { id: 'w', desc: 'Mujeres' },
-    { id: 'm', desc: 'Hombres' },
-    { id: 'c', desc: 'Niños' }
+    { id: 'Mujeres', desc: 'Mujeres' },
+    { id: 'Hombres', desc: 'Hombres' },
+    { id: 'Niños', desc: 'Niños' }
   ];
 
   currentSalonToUpdate: Boolean = false;
+
+  ngOnInit(): void {
+    if ( !this.router.url.includes('edit') ) {
+      this.currentSalonToUpdate = false;
+      return;
+    }
+
+    this.activatedRoute.params
+    .pipe(
+      switchMap( ({ id }) => this.salonService.getSalonById(id) )
+    )
+    .subscribe( salon => {
+      if (!salon) {
+        this.showSnackbar('No se encontró el salón');
+        return this.router.navigateByUrl('/administrative-staff/salon');
+      }
+
+      this.salonForm.reset({
+        id: salon.id.toString(),
+        name: salon.name,
+        capacity: salon.capacity.toString(),
+        type: salon.type,
+        floor: salon.floor.toString()
+
+      });
+
+      this.currentSalonToUpdate = true;
+
+      return;
+    });
+
+
+  }
 
   get currentSalon(): Salon {
     const salon = this.salonForm.value as unknown as Salon;
@@ -45,7 +80,7 @@ export class NewMedicalSalonComponent {
   }
 
   onSubmit() {
-
+    console.log(this.salonForm.value);
   }
 
   onDeleteSalon() {

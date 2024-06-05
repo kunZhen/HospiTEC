@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <mat-card-title>{{ salon.name }}</mat-card-title>
-    <mat-card-subtitle>{{ salon.number }}</mat-card-subtitle>
+    <mat-card-subtitle>{{ salon.id }}</mat-card-subtitle>
   </mat-card-header>
 
   <!-- TODO: Imagen  -->
@@ -27,7 +27,7 @@
     <button mat-button
       mat-raised
       color="primary"
-      [routerLink]="['/administrative-staff/salon/edit', salon.number]">
+      [routerLink]="['/administrative-staff/salon/edit', salon.id  ]">
       <mat-icon>edit</mat-icon>
       Editar
     </button>
