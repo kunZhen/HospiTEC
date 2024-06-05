@@ -118,6 +118,18 @@
       "secondPhoneNumber": ""
     }
   ],
+  "evaluation": [
+    {
+      "recordId": "1",
+      "cleanlinessComment": "fghf",
+      "cleanlinessRate": 3,
+      "staffTreatmentComment": "hfghf",
+      "staffTreatmentRate": 2,
+      "appointmentPunctualityComment": "hfgghfggh",
+      "appointmentPunctualityRate": 2,
+      "id": 1
+    }
+  ],
   "patients": [
     {
       "id": 123456789,
