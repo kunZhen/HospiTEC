@@ -14,6 +14,10 @@ import { EquipmentCardComponent } from './components/equipment-card/equipment-ca
 import { NewBedPageComponent } from './pages/new-bed-page/new-bed-page.component';
 import { ListBedPageComponent } from './pages/list-bed-page/list-bed-page.component';
 import { BedCardComponent } from './components/bed-card/bed-card.component';
+import { ListProcedurePageComponent } from './pages/list-procedure-page/list-procedure-page.component';
+import { NewProcedurePageComponent } from './pages/new-procedure-page/new-procedure-page.component';
+import { ListStaffPageComponent } from './pages/list-staff-page/list-staff-page.component';
+import { NewStaffPageComponent } from './pages/new-staff-page/new-staff-page.component';
 
 
 @NgModule({
@@ -27,7 +31,11 @@ import { BedCardComponent } from './components/bed-card/bed-card.component';
     EquipmentCardComponent,
     NewBedPageComponent,
     ListBedPageComponent,
-    BedCardComponent
+    BedCardComponent,
+    ListProcedurePageComponent,
+    NewProcedurePageComponent,
+    ListStaffPageComponent,
+    NewStaffPageComponent
   ],
   imports: [
     CommonModule,

@@ -18,6 +18,10 @@ export class LayoutPageComponent {
     { label: 'Añadir equipo médico', icon: 'add', url: './new-equipment'},
     { label: 'Equipo cama', icon: 'label', url: './bed'},
     { label: 'Añadir cama', icon: 'add', url: './new-bed'},
+    { label: 'Procedimientos médicos', icon: 'label', url: './procedure'},
+    { label: 'Añadir procedimiento', icon: 'add', url: './new-procedure'},
+    { label: 'Personal', icon: 'label', url: './staff'},
+    { label: 'Añadir personal', icon: 'add', url: './new-staff'},
     // { label: 'Añadir hoja clínica', icon: 'add', url: './new-record'},
     // { label: 'Buscar', icon: 'search', url: './search'},
   ]
