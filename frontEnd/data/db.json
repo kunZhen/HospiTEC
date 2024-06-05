@@ -6,6 +6,30 @@
       "email": "john.due@gmail.com"
     }
   ],
+  "admin": [
+    {
+      "id": 789564123,
+      "name": "Jane Smith",
+      "firstLastName": "Gomez",
+      "secondLastName": "Martinez",
+      "email": "jane.smith@admin.sa.cr",
+      "password": "1234",
+      "address": "Avenida 2",
+      "firstPhoneNumber": "89765432",
+      "secondPhoneNumber": "83456789"
+    },
+    {
+      "id": 196859623,
+      "name": "Carlos Rivera",
+      "firstLastName": "Jimenez",
+      "secondLastName": "Fernandez",
+      "email": "carlos.rivera@admin.sa.cr",
+      "password": "1234",
+      "address": "Calle 3",
+      "firstPhoneNumber": "81234567",
+      "secondPhoneNumber": "82345678"
+    }
+  ],
   "doctor": [
     {
       "id": 1,
@@ -121,12 +145,12 @@
   "evaluation": [
     {
       "recordId": "1",
-      "cleanlinessComment": "fghf",
+      "cleanlinessComment": "Hace falta limpiar varias zonas",
       "cleanlinessRate": 3,
-      "staffTreatmentComment": "hfghf",
-      "staffTreatmentRate": 2,
-      "appointmentPunctualityComment": "hfgghfggh",
-      "appointmentPunctualityRate": 2,
+      "staffTreatmentComment": "Buen trato por parte del personal",
+      "staffTreatmentRate": 5,
+      "appointmentPunctualityComment": "Tardaron 10 minutos en atenderme",
+      "appointmentPunctualityRate": 4,
       "id": 1
     }
   ],
@@ -285,6 +309,36 @@
       "treatment": "",
       "alt_img": "no-image"
     }
+  ],
+  "salon": [
+      {
+        "number": 101,
+        "name": "Sala A",
+        "capacity": 10,
+        "type": "Mujeres",
+        "floor": 1
+      },
+      {
+        "number": 102,
+        "name": "Sala B",
+        "capacity": 8,
+        "type": "Hombres",
+        "floor": 2
+      },
+      {
+        "number": 103,
+        "name": "Sala C",
+        "capacity": 12,
+        "type": "Niños",
+        "floor": 2
+      },
+      {
+        "number": 104,
+        "name": "Sala D",
+        "capacity": 15,
+        "type": "Mujeres",
+        "floor": 3
+      }
   ],
   "records": [
     {

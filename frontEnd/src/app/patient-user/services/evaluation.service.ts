@@ -15,6 +15,15 @@ export class EvaluationService {
 
   constructor() { }
 
+  getEvaluationByRecordId(recordId: string): Observable<Evaluation> {
+    const url = `${this.baseUrl}/evaluation?recordId=${recordId}`;
+
+    return this.http.get<Evaluation[]>(url)
+      .pipe(
+        map(evaluations => evaluations[0])
+      );
+  }
+
   addEvaluation(evaluation: Evaluation) {
     const url = `${this.baseUrl}/evaluation`;
 

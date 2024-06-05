@@ -23,10 +23,12 @@ const routes: Routes = [
     // canActivate: [AuthGuard],
     // canMatch: [AuthGuard]
   },
-  // {
-  //   path: 'doctor',
-  //   loadChildren: () => import('./doctor/doctor.module').then(m => m.DoctorModule)
-  // },
+  {
+    path: 'administrative-staff',
+    loadChildren: () => import('./administrative-staff/administrative-staff.module').then(m => m.AdministrativeStaffModule),
+    // canActivate: [AuthGuard],
+    // canMatch: [AuthGuard]
+  },
   {
     path: '404',
     component: Error404PageComponent

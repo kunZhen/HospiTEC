@@ -16,9 +16,13 @@ export class LoginPageComponent {
   ) { }
 
   public loginForm = this.fb.group({
-    email: ['carlos.perez@gmail.com', [Validators.required, Validators.email]],
+    email: ['jane.smith@admin.sa.cr', [Validators.required, Validators.email]],
     password: ['1234', [Validators.required]]
   });
+
+  // jane.smith@admin.sa.cr
+  // john.due@ccss.sa.cr
+  // carlos.perez@gmail.com
 
   onLogin() {
 
@@ -37,7 +41,13 @@ export class LoginPageComponent {
         }
       });
     } else if ( email?.endsWith('@admin.sa.cr')) {
-      console.log('ADMINISTRADOR');
+      this.authService.logInAdmin(email!, password!).subscribe( success => {
+        if (success) {
+          this.router.navigate(['/administrative-staff']);
+        } else {
+          console.log('Login failed');
+        }
+      });
     } else {
       this.authService.logInPatient(email!, password!).subscribe( success => {
         if (success) {

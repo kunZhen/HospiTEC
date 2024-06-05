@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Record } from 'src/app/patient/interfaces/record.interface';
 import { RecordService } from '../../../patient/services/record.service';
@@ -53,6 +53,11 @@ export class GradePageComponent implements OnInit {
 
 
   ngOnInit(): void {
+
+    this.maxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
+    this.staffTreatmentMaxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
+    this.appoinmentPunctualityMaxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
+
     this.activatedRoute.params
       .pipe(
         delay(500),
@@ -64,13 +69,28 @@ export class GradePageComponent implements OnInit {
 
         this.record = record;
         this.recordId = record.id;
-        console.log(this.record);
+
+        this.evaluationService.getEvaluationByRecordId(this.recordId)
+        .subscribe( evaluation => {
+          if (evaluation) {
+            this.evaluationForm.patchValue({
+              cleanliness: evaluation.cleanlinessRate,
+              staffTreatment: evaluation.staffTreatmentRate,
+              appoinmentPunctuality: evaluation.appointmentPunctualityRate,
+              commentsCleanliness: evaluation.cleanlinessComment,
+              commentsStaffTreatment: evaluation.staffTreatmentComment,
+              commentsAppoinmentPunctuality: evaluation.appointmentPunctualityComment
+            });
+
+            this.cleanlinessSelectedStar = evaluation.cleanlinessRate;
+            this.staffTreatmentSelectedStar = evaluation.staffTreatmentRate;
+            this.appoinmentPunctualitySelectedStar = evaluation.appointmentPunctualityRate;
+          }
+        });
+
         return;
       })
 
-    this.maxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
-    this.staffTreatmentMaxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
-    this.appoinmentPunctualityMaxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
   }
 
   goBack():void {
