@@ -29,52 +29,65 @@
         <h2>{{ record.procedure[0].name }} - {{ record.date | date: 'MM/dd/yyyy' }}</h2>
         <h3>{{ record.procedure[0].description }}</h3>
       </mat-card-subtitle>
-
-      <mat-card-subtitle>
-        <h2>{{ record.procedure[0] }}</h2>
-      </mat-card-subtitle>
     </mat-card-header>
 
     <mat-card-content>
 
-      <mat-toolbar color="primary">
-        <span>Detalles de la evaluación</span>
-        <mat-icon *ngFor="let star of maxRatingArray; let i = index"
-          (mouseenter)="setRating(i)"
-          [ngClass]="{checked: selectedStar > i}"
-        >star</mat-icon>
-      </mat-toolbar>
-      <mat-list>
+        <form>
 
-        <mat-list-item>
-          <strong>Fecha:</strong>
-          {{ record.date| date: 'MM/dd/yyyy'}}
-        </mat-list-item>
+          <mat-toolbar color="primary">
+            <strong class="small-title">Aseo del hospital</strong>
+            <span class="spacer"></span>
+            <mat-icon *ngFor="let star of maxRatingArray; let i = index"
+              (mouseenter)="handleMouseEnter(i)"
+              (mouseleave)="handleMouseLeave()"
+              (click)="rating(i)"
+              [ngClass]="{checked: cleanlinessSelectedStar > i}"
+            >star</mat-icon>
+          </mat-toolbar>
 
-        <mat-list-item>
-          <strong>Descripción:</strong>
-          {{ record.procedure[0].description }}
-        </mat-list-item>
+          <mat-form-field class="full-width">
+            <mat-label>Comentario</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
 
+          <mat-toolbar color="primary">
+            <strong class="small-title">Trato del personal</strong>
+            <span class="spacer"></span>
+            <mat-icon *ngFor="let star of staffTreatmentMaxRatingArray; let i = index"
+              (mouseenter)="handleMouseEnterStaffTreatment(i)"
+              (mouseleave)="handleMouseLeaveStaffTreatment()"
+              (click)="rateStaffTreatment(i)"
+              [ngClass]="{checked: staffTreatmentSelectedStar > i}"
+            >star</mat-icon>
+          </mat-toolbar>
+
+          <mat-form-field class="full-width">
+            <mat-label>Comentario</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+          <mat-toolbar color="primary">
+            <strong class="small-title">Puntualidad de las citas</strong>
+            <span class="spacer"></span>
+            <mat-icon *ngFor="let star of maxRatingArray; let i = index"
+              (mouseenter)="handleMouseEnterAppoinmentPunctuality(i)"
+              (mouseleave)="handleMouseLeaveAppoinmentPunctuality()"
+              (click)="rateAppoinmentPunctuality(i)"
+              [ngClass]="{checked: appoinmentPunctualitySelectedStar > i}"
+            >star</mat-icon>
+          </mat-toolbar>
+
+          <mat-form-field class="full-width">
+            <mat-label>Comentario</mat-label>
+            <textarea matInput></textarea>
+          </mat-form-field>
+
+        </form>
 
 
         <br>
 
-        <!-- <strong *ngIf="patient.patology">Patologías:</strong>
-        <mat-chip-listbox *ngIf="patient.patology">
-          <mat-chip *ngFor="let name of patient.patology.split(',')">
-            {{ name }}
-          </mat-chip>
-        </mat-chip-listbox>
-
-        <strong *ngIf="patient.treatment">Tratamiento:</strong>
-        <mat-chip-listbox *ngIf="patient.treatment">
-          <mat-chip *ngFor="let name of patient.treatment.split(',')">
-            {{ name }}
-          </mat-chip>
-        </mat-chip-listbox> -->
-
-      </mat-list>
 
       <button
         mat-button
@@ -88,8 +101,5 @@
 
 
   </mat-card>
-
-  <!-- <list-record-page></list-record-page> -->
-
 
 </div>

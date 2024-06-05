@@ -1,3 +1,30 @@
 .checked{
   color: orange;
 }
+mat-icon{
+  cursor: pointer;
+}
+
+.evaluation-container {
+  padding: 16px;
+}
+
+.list-item {
+  margin-bottom: 16px;
+}
+
+.toolbar {
+  justify-content: space-between;
+}
+
+.small-title {
+  font-size: 16px;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.full-width {
+  width: 100%;
+}

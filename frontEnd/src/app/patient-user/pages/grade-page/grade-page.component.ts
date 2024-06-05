@@ -13,8 +13,18 @@ export class GradePageComponent implements OnInit {
 
   public record?: Record;
   public maxRating: number = 5;
+
   public maxRatingArray: number[] = [];
-  public selectedStar: number = 0;
+  public cleanlinessSelectedStar: number = 0;
+  public previousSelection: number = 0;
+
+  public staffTreatmentMaxRatingArray: number[] = [];
+  public staffTreatmentSelectedStar: number = 0;
+  public staffTreatmentPreviousSelection: number = 0;
+
+  public appoinmentPunctualityMaxRatingArray: number[] = [];
+  public appoinmentPunctualitySelectedStar: number = 0;
+  public appoinmentPunctualityPreviousSelection: number = 0;
 
   constructor(
     private recordService: RecordService,
@@ -38,14 +48,62 @@ export class GradePageComponent implements OnInit {
       })
 
     this.maxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
+    this.staffTreatmentMaxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
+    this.appoinmentPunctualityMaxRatingArray = Array(this.maxRating).fill(0).map((x, i) => i);
   }
 
   goBack():void {
     this.router.navigateByUrl('patient-user/records')
   }
 
-  setRating(index: number) {
-    this.selectedStar = index + 1;
+  // Cleanliness
+
+  handleMouseEnter(index: number) {
+    this.cleanlinessSelectedStar = index + 1;
   }
 
+  handleMouseLeave() {
+    if (this.previousSelection !== 0) this.cleanlinessSelectedStar = this.previousSelection;
+    else this.cleanlinessSelectedStar = 0;
+  }
+
+  rating(index: number) {
+    this.cleanlinessSelectedStar = index + 1;
+    this.previousSelection = this.cleanlinessSelectedStar;
+    console.log(this.cleanlinessSelectedStar);
+  }
+
+  // Staff Treatment
+
+  handleMouseEnterStaffTreatment(index: number) {
+    this.staffTreatmentSelectedStar = index + 1;
+  }
+
+  handleMouseLeaveStaffTreatment() {
+    if (this.staffTreatmentPreviousSelection !== 0) this.staffTreatmentSelectedStar = this.staffTreatmentPreviousSelection;
+    else this.staffTreatmentSelectedStar = 0;
+  }
+
+  rateStaffTreatment(index: number) {
+    this.staffTreatmentSelectedStar = index + 1;
+    this.staffTreatmentPreviousSelection = this.staffTreatmentSelectedStar;
+    console.log(this.staffTreatmentSelectedStar);
+  }
+
+  // Appoinment Punctuality
+
+  handleMouseEnterAppoinmentPunctuality(index: number) {
+    this.appoinmentPunctualitySelectedStar = index + 1;
+  }
+
+  handleMouseLeaveAppoinmentPunctuality() {
+    if (this.appoinmentPunctualityPreviousSelection !== 0) this.appoinmentPunctualitySelectedStar = this.appoinmentPunctualityPreviousSelection;
+    else this.appoinmentPunctualitySelectedStar = 0;
+  }
+
+  rateAppoinmentPunctuality(index: number) {
+    this.appoinmentPunctualitySelectedStar = index + 1;
+    this.appoinmentPunctualityPreviousSelection = this.appoinmentPunctualitySelectedStar;
+    console.log(this.appoinmentPunctualitySelectedStar);
+  }
 }
