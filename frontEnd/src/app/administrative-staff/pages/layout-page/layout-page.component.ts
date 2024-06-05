@@ -14,6 +14,8 @@ export class LayoutPageComponent {
   public sidebarItems = [
     { label: 'Salones', icon: 'label', url: './salon'},
     { label: 'Añadir salón', icon: 'add', url: './new-salon'},
+    { label: 'Equipo médico', icon: 'label', url: './equipment'},
+    { label: 'Añadir equipo médico', icon: 'add', url: './new-equipment'},
     // { label: 'Añadir hoja clínica', icon: 'add', url: './new-record'},
     // { label: 'Buscar', icon: 'search', url: './search'},
   ]

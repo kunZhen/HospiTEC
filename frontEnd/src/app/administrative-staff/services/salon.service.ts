@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
-import { Observable, catchError, of } from 'rxjs';
+import { Observable, catchError, map, of } from 'rxjs';
 import { environments } from 'src/environments/environments';
 import { Salon } from '../interfaces/salon.interface';
 
@@ -42,9 +42,13 @@ export class SalonService {
     return this.http.put<Salon>(url, salon);
   }
 
-  deleteSalon(id: number): Observable<Salon> {
+  deleteSalon(id: number) {
     const url = `${this.baseUrl}/salon/${id}`;
 
-    return this.http.delete<Salon>(url);
+    return this.http.delete(url)
+    .pipe(
+      catchError( error => of(false) ),
+      map(resp => true)
+    );
   }
 }

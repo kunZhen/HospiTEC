@@ -5,7 +5,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { SalonService } from '../../services/salon.service';
 import { Salon } from '../../interfaces/salon.interface';
-import { switchMap } from 'rxjs';
+import { filter, switchMap } from 'rxjs';
+import { ConfirmDialogComponent } from 'src/app/patient/components/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-new-medical-salon',
@@ -69,8 +70,6 @@ export class NewMedicalSalonComponent implements OnInit {
 
       return;
     });
-
-
   }
 
   get currentSalon(): Salon {
@@ -80,10 +79,40 @@ export class NewMedicalSalonComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.salonForm.value);
+    if ( this.salonForm.invalid ) return;
+
+    if ( this.currentSalonToUpdate ) {
+      this.salonService.updateSalon(this.currentSalon).subscribe( salon => {
+        this.showSnackbar(`Salón ${ salon.id } actualizado`);
+        this.router.navigateByUrl('/administrative-staff/salon');
+      });
+
+      return;
+    }
+
+    this.salonService.createSalon(this.currentSalon).subscribe( salon => {
+      this.showSnackbar(`Salón ${ salon.id } creado`);
+      this.router.navigateByUrl('/administrative-staff/salon');
+    });
+
   }
 
   onDeleteSalon() {
+    if ( !this.currentSalon.id ) throw Error('Salon id is required');
+
+    const dialogRef = this.dialog.open( ConfirmDialogComponent, {
+      data: this.salonForm.value
+    });
+
+    dialogRef.afterClosed()
+      .pipe(
+        filter( (result: boolean) => result ),
+        switchMap( () => this.salonService.deleteSalon( this.currentSalon.id )),
+        filter( (wasDeleted: boolean) => wasDeleted ),
+      )
+      .subscribe(() => {
+        this.router.navigate(['/administrative-staff/salon']);
+      });
 
   }
 

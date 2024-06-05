@@ -1,6 +1,6 @@
 <h1>
-  {{ currentSalonToUpdate ? 'Editar' : 'Agregar'}}
-  <small>salón</small>
+  {{ currentEquipmentToUpdate ? 'Editar' : 'Agregar'}}
+  <small>Equipo médico</small>
 </h1>
 
 <mat-divider class="mb-2"></mat-divider>
@@ -11,7 +11,7 @@
     <mat-card>
       <mat-card-content>
 
-        <form class="grid" [formGroup]="salonForm" (ngSubmit)="onSubmit()">
+        <form class="grid" [formGroup]="equipmentForm" (ngSubmit)="onSubmit()">
 
           <mat-form-field class="col-12">
             <mat-label>Número de salón</mat-label>
@@ -21,7 +21,7 @@
               required
               pattern="\d*"
               inputmode="numeric"
-              formControlName="id"
+              formControlName="salonNumber"
             />
           </mat-form-field>
 
@@ -36,47 +36,35 @@
           </mat-form-field>
 
           <mat-form-field class="col-12 sm:col-6">
-            <mat-label>Capacidad</mat-label>
+            <mat-label>Proveedor</mat-label>
             <input
               matInput
-              type="number"
+              type="text"
               required
-              formControlName="capacity"
+              formControlName="provider"
             />
           </mat-form-field>
 
           <mat-form-field class="col-12 sm:col-6">
-            <mat-label>Piso</mat-label>
+            <mat-label>Cantidad disponible</mat-label>
             <input
               matInput
               type="number"
               required
-              formControlName="floor"
+              formControlName="amount"
             />
           </mat-form-field>
 
-          <mat-form-field class="col-12">
-            <mat-label>Tipo</mat-label>
-            <mat-select
-              formControlName="type"
-              required
-            >
-              <mat-option *ngFor="let type of types"
-                [value]="type.id">
-                {{ type.desc }}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
 
 
         </form>
 
         <div class="flex justify-content-between">
           <button
-          *ngIf="currentSalonToUpdate"
+          *ngIf="currentEquipmentToUpdate"
             mat-flat-button
             color="warn"
-            (click)="onDeleteSalon()"
+            (click)="onDeleteEquipment()"
           >
             Borrar
           </button>
@@ -99,21 +87,21 @@
   <div class="col-12 sm:col-6">
 
     <mat-card>
-      <img src="assets\medical-salon.jpg" alt="no-image" mat-card-image>
+      <img src="assets\medical-equipment.png" alt="no-image" mat-card-image>
     </mat-card>
 
   </div>
 </div>
 
 <pre>
-  Formulario valido: {{ salonForm.valid | json }}
+  Formulario valido: {{ equipmentForm.valid | json }}
 </pre>
 
 <pre>
-  {{ currentSalon | json }}
+  {{ currentEquipment | json }}
 </pre>
 
 <pre>
-  currentSalonToUpdate: {{ currentSalonToUpdate | json }}
+  currentEquipmentToUpdate: {{ currentEquipmentToUpdate | json }}
 </pre>
 

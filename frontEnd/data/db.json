@@ -311,34 +311,92 @@
     }
   ],
   "salon": [
-      {
-        "id": 101,
-        "name": "Sala A",
-        "capacity": 10,
-        "type": "Mujeres",
-        "floor": 1
-      },
-      {
-        "id": 102,
-        "name": "Sala B",
-        "capacity": 8,
-        "type": "Hombres",
-        "floor": 2
-      },
-      {
-        "id": 103,
-        "name": "Sala C",
-        "capacity": 12,
-        "type": "Niños",
-        "floor": 2
-      },
-      {
-        "id": 104,
-        "name": "Sala D",
-        "capacity": 15,
-        "type": "Mujeres",
-        "floor": 3
-      }
+    {
+      "id": 101,
+      "name": "Sala A",
+      "capacity": 10,
+      "type": "Mujeres",
+      "floor": 1
+    },
+    {
+      "id": 102,
+      "name": "Sala B",
+      "capacity": 8,
+      "type": "Hombres",
+      "floor": 2
+    },
+    {
+      "id": 103,
+      "name": "Sala C",
+      "capacity": 12,
+      "type": "Niños",
+      "floor": 2
+    },
+    {
+      "id": 104,
+      "name": "Sala D",
+      "capacity": 15,
+      "type": "Mujeres",
+      "floor": 3
+    },
+    {
+      "id": 109,
+      "name": "Salon 50",
+      "capacity": 30,
+      "type": "Niños",
+      "floor": 5
+    }
+  ],
+  "equipment": [
+    {
+      "id": 1,
+      "salonNumber": 101,
+      "name": "Luces Quirúrgicas",
+      "provider": "MedEquip",
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "salonNumber": 102,
+      "name": "Ultrasonidos",
+      "provider": "HealthPro",
+      "amount": 2
+    },
+    {
+      "id": 3,
+      "salonNumber": 103,
+      "name": "Esterilizadores",
+      "provider": "CleanMed",
+      "amount": 4
+    },
+    {
+      "id": 4,
+      "salonNumber": 104,
+      "name": "Desfibriladores",
+      "provider": "CardioTech",
+      "amount": 6
+    },
+    {
+      "id": 5,
+      "salonNumber": 105,
+      "name": "Monitores",
+      "provider": "VitalMed",
+      "amount": 7
+    },
+    {
+      "id": 6,
+      "salonNumber": 106,
+      "name": "Respiradores Artificiales",
+      "provider": "BreatheEasy",
+      "amount": 3
+    },
+    {
+      "id": 7,
+      "salonNumber": 107,
+      "name": "Electrocardiógrafos",
+      "provider": "HeartBeat",
+      "amount": 5
+    }
   ],
   "records": [
     {

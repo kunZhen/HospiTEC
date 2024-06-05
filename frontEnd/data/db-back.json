@@ -6,21 +6,155 @@
       "email": "john.due@gmail.com"
     }
   ],
-  "patients": [
+  "admin": [
     {
-      "id": 789262356,
-      "name": "Leon",
-      "firstLastName": "Sanchez",
+      "id": 789564123,
+      "name": "Jane Smith",
+      "firstLastName": "Gomez",
       "secondLastName": "Martinez",
-      "firstPhoneNumber": "88954589",
-      "secondPhoneNumber": "88569637",
-      "email": "maria.sanchez@gmail.com",
+      "email": "jane.smith@admin.sa.cr",
       "password": "1234",
-      "address": "Calle 10",
-      "birthDate": "2006-09-04T06:00:00.000Z",
-      "patology": "Diabetes, Hipertension, Cancer",
-      "treatment": "Insulina, Metformina, Quimioterapia"
+      "address": "Avenida 2",
+      "firstPhoneNumber": "89765432",
+      "secondPhoneNumber": "83456789"
     },
+    {
+      "id": 196859623,
+      "name": "Carlos Rivera",
+      "firstLastName": "Jimenez",
+      "secondLastName": "Fernandez",
+      "email": "carlos.rivera@admin.sa.cr",
+      "password": "1234",
+      "address": "Calle 3",
+      "firstPhoneNumber": "81234567",
+      "secondPhoneNumber": "82345678"
+    }
+  ],
+  "doctor": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "firstLastName": "Perez",
+      "secondLastName": "Lopez",
+      "email": "john.due@ccss.sa.cr",
+      "password": "1234",
+      "address": "Calle 1",
+      "firstPhoneNumber": "88776655",
+      "secondPhoneNumber": "88447788"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "firstLastName": "Garcia",
+      "secondLastName": "Rodriguez",
+      "email": "jane.smith@ccss.sa.cr",
+      "password": "doctor123",
+      "address": "Main Street 123",
+      "firstPhoneNumber": "5551234567",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 3,
+      "name": "Michael Williams",
+      "firstLastName": "Hernandez",
+      "secondLastName": "Diaz",
+      "email": "michael.williams@ccss.sa.cr",
+      "password": "heal2024",
+      "address": "Maple Avenue 456",
+      "firstPhoneNumber": "5557890123",
+      "secondPhoneNumber": "5554567890"
+    },
+    {
+      "id": 4,
+      "name": "Ashley Miller",
+      "firstLastName": "Lee",
+      "secondLastName": "Kim",
+      "email": "ashley.miller@ccss.sa.cr",
+      "password": "care4you",
+      "address": "Park Lane 789",
+      "firstPhoneNumber": "5550987654",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 5,
+      "name": "David Johnson",
+      "firstLastName": "Wang",
+      "secondLastName": "Chen",
+      "email": "david.johnson@ccss.sa.cr",
+      "password": "doctorDJ",
+      "address": "Elm Street 1011",
+      "firstPhoneNumber": "5552345678",
+      "secondPhoneNumber": "5559876543"
+    },
+    {
+      "id": 6,
+      "name": "Sarah Wilson",
+      "firstLastName": "Gonzalez",
+      "secondLastName": "Allen",
+      "email": "sarah.wilson@ccss.sa.cr",
+      "password": "healthy123",
+      "address": "Birch Road 234",
+      "firstPhoneNumber": "5555678901",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 7,
+      "name": "Richard Moore",
+      "firstLastName": "Young",
+      "secondLastName": "Brown",
+      "email": "richard.moore@ccss.sa.cr",
+      "password": "healthexpert",
+      "address": "Pine Street 567",
+      "firstPhoneNumber": "5551011123",
+      "secondPhoneNumber": "5553456789"
+    },
+    {
+      "id": 8,
+      "name": "Amanda Garcia",
+      "firstLastName": "Nelson",
+      "secondLastName": "Clark",
+      "email": "amanda.garcia@ccss.sa.cr",
+      "password": "carenow",
+      "address": "Oak Avenue 890",
+      "firstPhoneNumber": "5556789012",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 9,
+      "name": "Daniel Thomas",
+      "firstLastName": "Scott",
+      "secondLastName": "Mitchell",
+      "email": "daniel.thomas@ccss.sa.cr",
+      "password": "doctorDT",
+      "address": "Spruce Street 1213",
+      "firstPhoneNumber": "5557890098",
+      "secondPhoneNumber": "5555678012"
+    },
+    {
+      "id": 10,
+      "name": "Jennifer Lopez",
+      "firstLastName": "Lewis",
+      "secondLastName": "Robinson",
+      "email": "jennifer.lopez@ccss.sa.cr",
+      "password": "healwithus",
+      "address": "Willow Street 1516",
+      "firstPhoneNumber": "5558901234",
+      "secondPhoneNumber": ""
+    }
+  ],
+  "evaluation": [
+    {
+      "recordId": "1",
+      "cleanlinessComment": "Hace falta limpiar varias zonas",
+      "cleanlinessRate": 3,
+      "staffTreatmentComment": "Buen trato por parte del personal",
+      "staffTreatmentRate": 5,
+      "appointmentPunctualityComment": "Tardaron 10 minutos en atenderme",
+      "appointmentPunctualityRate": 4,
+      "id": 1
+    }
+  ],
+  "patients": [
     {
       "id": 123456789,
       "name": "Carlos",
@@ -146,6 +280,201 @@
       "birthDate": "1987-03-05T06:00:00.000Z",
       "patology": "Gastritis",
       "treatment": "Antiácidos, Inhibidores de la bomba de protones"
+    },
+    {
+      "id": "656565253",
+      "name": "fsdfsd",
+      "firstLastName": "dsfdsf",
+      "secondLastName": "dsfsdf",
+      "firstPhoneNumber": "78578525",
+      "secondPhoneNumber": "57575787",
+      "email": "k@gmail.com",
+      "address": "dsfsdf",
+      "birthDate": "2004-01-01T00:00:00.000Z",
+      "patology": "",
+      "treatment": "",
+      "alt_img": "no-image"
+    },
+    {
+      "id": "798798789",
+      "name": "gdfgdfg",
+      "firstLastName": "fgdfgdf",
+      "secondLastName": "fdgvd",
+      "firstPhoneNumber": "66876986",
+      "secondPhoneNumber": "86868976",
+      "email": "l@gmai.com",
+      "address": "dfsfsd",
+      "birthDate": "2003-12-16T06:00:00.000Z",
+      "patology": "",
+      "treatment": "",
+      "alt_img": "no-image"
+    }
+  ],
+  "salon": [
+    {
+      "id": 101,
+      "name": "Sala A",
+      "capacity": 10,
+      "type": "Mujeres",
+      "floor": 1
+    },
+    {
+      "id": 102,
+      "name": "Sala B",
+      "capacity": 8,
+      "type": "Hombres",
+      "floor": 2
+    },
+    {
+      "id": 103,
+      "name": "Sala C",
+      "capacity": 12,
+      "type": "Niños",
+      "floor": 2
+    },
+    {
+      "id": 104,
+      "name": "Sala D",
+      "capacity": 15,
+      "type": "Mujeres",
+      "floor": 3
+    },
+    {
+      "id": 109,
+      "name": "Salon 50",
+      "capacity": 30,
+      "type": "Niños",
+      "floor": 5
+    }
+  ],
+  "equipment": [
+    {
+      "id": 1,
+      "salonNumber": 101,
+      "name": "Luces Quirúrgicas",
+      "provider": "MedEquip",
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "salonNumber": 102,
+      "name": "Ultrasonidos",
+      "provider": "HealthPro",
+      "amount": 2
+    },
+    {
+      "id": 3,
+      "salonNumber": 103,
+      "name": "Esterilizadores",
+      "provider": "CleanMed",
+      "amount": 4
+    },
+    {
+      "id": 4,
+      "salonNumber": 104,
+      "name": "Desfibriladores",
+      "provider": "CardioTech",
+      "amount": 6
+    },
+    {
+      "id": 5,
+      "salonNumber": 105,
+      "name": "Monitores",
+      "provider": "VitalMed",
+      "amount": 7
+    },
+    {
+      "id": 6,
+      "salonNumber": 106,
+      "name": "Respiradores Artificiales",
+      "provider": "BreatheEasy",
+      "amount": 3
+    },
+    {
+      "id": 7,
+      "salonNumber": 107,
+      "name": "Electrocardiógrafos",
+      "provider": "HeartBeat",
+      "amount": 5
+    }
+  ],
+  "records": [
+    {
+      "id": "1",
+      "patientId": 123456789,
+      "date": "2003-12-16T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Vacunación antirrábica",
+          "description": "Aplicación de vacuna contra la rabia"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "patientId": 123456789,
+      "date": "2004-01-08T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Desparasitación",
+          "description": "Administración de antiparasitarios"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "patientId": 123456789,
+      "date": "2004-02-20T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Chequeo general",
+          "description": "Examen físico completo"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "patientId": 123456789,
+      "date": "2004-03-15T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Limpieza dental",
+          "description": "Limpieza y revisión dental. Calzas nuevas"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "patientId": 123456789,
+      "date": "2004-04-28T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugía menor",
+          "description": "Extracción de cuerpo extraño"
+        }
+      ]
+    },
+    {
+      "id": "397",
+      "patientId": "987654321",
+      "date": "2024-06-29T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugia menor",
+          "description": "Extraccion de muela de juicio"
+        }
+      ]
+    },
+    {
+      "id": "398",
+      "patientId": "987654321",
+      "date": "2024-06-29T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugia menor",
+          "description": "Extraccion de muela de juicio"
+        }
+      ]
     }
   ],
   "heroes": [

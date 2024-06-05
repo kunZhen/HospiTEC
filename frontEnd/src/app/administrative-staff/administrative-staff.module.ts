@@ -8,6 +8,9 @@ import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 import { NewMedicalSalonComponent } from './pages/new-medical-salon/new-medical-salon.component';
 import { ListMedicalSalonComponent } from './pages/list-medical-salon/list-medical-salon.component';
 import { SalonCardComponent } from './components/salon-card/salon-card.component';
+import { ListEquipmentPageComponent } from './pages/list-equipment-page/list-equipment-page.component';
+import { NewEquipmentPageComponent } from './pages/new-equipment-page/new-equipment-page.component';
+import { EquipmentCardComponent } from './components/equipment-card/equipment-card.component';
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import { SalonCardComponent } from './components/salon-card/salon-card.component
     LayoutPageComponent,
     NewMedicalSalonComponent,
     ListMedicalSalonComponent,
-    SalonCardComponent
+    SalonCardComponent,
+    ListEquipmentPageComponent,
+    NewEquipmentPageComponent,
+    EquipmentCardComponent
   ],
   imports: [
     CommonModule,
