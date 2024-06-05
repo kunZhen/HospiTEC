@@ -1,0 +1,105 @@
+<h1>
+  {{ currentRecordToUpdate ? 'Editar' : 'Agregar'}}
+  <small>procedimiento</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+
+<div class="grid">
+
+  <div class="col-12">
+    <mat-card>
+      <mat-card-content>
+
+        <form class="grid" [formGroup]="recordForm" (ngSubmit)="onSubmit()">
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Identificación del paciente</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              maxlength="9"
+              pattern="\d*"
+              inputmode="numeric"
+              formControlName="patientId"
+            />
+          </mat-form-field>
+
+
+          <mat-form-field color="accent" class="col-12 sm:col-6">
+            <mat-label>Fecha</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="date">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="procedureName"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Descripción</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="procedureDescription"
+            />
+          </mat-form-field>
+
+        </form>
+
+        <div class="flex justify-content-between">
+          <button
+          *ngIf="currentRecordToUpdate"
+            mat-flat-button
+            color="warn"
+            (click)="onDeleteRecord()"
+          >
+            Borrar
+          </button>
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="onSubmit()"
+          >
+            <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-12 sm:col-6">
+
+    <!-- <mat-card>
+      <img [src]="currentPatient | patientImage" alt="no-image" mat-card-image>
+    </mat-card> -->
+
+  </div>
+</div>
+
+<pre>
+  currentRecordToUpdate: {{ currentRecordToUpdate | json }}
+</pre>
+
+<pre>
+  Formulario valido: {{ recordForm.valid | json }}
+</pre>
+
+<pre>
+  {{ currentRecord | json }}
+</pre>

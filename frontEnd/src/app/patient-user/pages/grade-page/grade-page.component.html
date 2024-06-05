@@ -1,0 +1,122 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="record; else divLoading" class="grid p-2">
+  <div class="col-12">
+  </div>
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+    </mat-card-header>
+
+    <img src="assets\medical-procedure.png" [alt]="record.id" mat-card-image />
+
+  </mat-card>
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Evaluación del servicio recibido</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h2>{{ record.procedure[0].name }} - {{ record.date | date: 'MM/dd/yyyy' }}</h2>
+        <h3>{{ record.procedure[0].description }}</h3>
+      </mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+
+        <form class="grid" [formGroup]="evaluationForm" (ngSubmit)="onSubmit()">
+
+          <mat-toolbar color="primary">
+            <strong class="small-title">Aseo del hospital</strong>
+            <span class="spacer"></span>
+            <mat-icon *ngFor="let star of maxRatingArray; let i = index"
+              (mouseenter)="handleMouseEnter(i)"
+              (mouseleave)="handleMouseLeave()"
+              (click)="rating(i)"
+              [ngClass]="{checked: cleanlinessSelectedStar > i}"
+            >star</mat-icon>
+          </mat-toolbar>
+
+          <mat-form-field class="full-width">
+            <mat-label>Comentario</mat-label>
+            <textarea matInput
+            formControlName="commentsCleanliness"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-toolbar color="primary">
+            <strong class="small-title">Trato del personal</strong>
+            <span class="spacer"></span>
+            <mat-icon *ngFor="let star of staffTreatmentMaxRatingArray; let i = index"
+              (mouseenter)="handleMouseEnterStaffTreatment(i)"
+              (mouseleave)="handleMouseLeaveStaffTreatment()"
+              (click)="rateStaffTreatment(i)"
+              [ngClass]="{checked: staffTreatmentSelectedStar > i}"
+            >star</mat-icon>
+          </mat-toolbar>
+
+          <mat-form-field class="full-width">
+            <mat-label>Comentario</mat-label>
+            <textarea matInput
+            formControlName="commentsStaffTreatment"
+            ></textarea>
+          </mat-form-field>
+
+          <mat-toolbar color="primary">
+            <strong class="small-title">Puntualidad de las citas</strong>
+            <span class="spacer"></span>
+            <mat-icon *ngFor="let star of maxRatingArray; let i = index"
+              (mouseenter)="handleMouseEnterAppoinmentPunctuality(i)"
+              (mouseleave)="handleMouseLeaveAppoinmentPunctuality()"
+              (click)="rateAppoinmentPunctuality(i)"
+              [ngClass]="{checked: appoinmentPunctualitySelectedStar > i}"
+            >star</mat-icon>
+          </mat-toolbar>
+
+          <mat-form-field class="full-width">
+            <mat-label>Comentario</mat-label>
+            <textarea matInput
+            formControlName="commentsAppoinmentPunctuality"
+            ></textarea>
+          </mat-form-field>
+
+        </form>
+
+
+        <br>
+
+      <div class="flex justify-content-between">
+        <button
+          mat-flat-button
+          color="warn"
+          (click)="goBack()"
+        >
+        Cancelar
+        </button>
+        <span></span>
+
+        <button
+          mat-flat-button
+          color="primary"
+          (click)="onSubmit()"
+        >
+          <mat-icon>Evaluar</mat-icon>
+          Guardar
+        </button>
+      </div>
+
+    </mat-card-content>
+
+
+  </mat-card>
+
+</div>

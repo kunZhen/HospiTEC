@@ -1,0 +1,50 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ patient.name }}</mat-card-title>
+    <mat-card-title>{{ patient.firstLastName }} {{ patient.secondLastName }}</mat-card-title>
+  </mat-card-header>
+
+  <!-- TODO: Imagen  -->
+  <!-- {{ patient | patientImage }} -->
+  <img mat-card-image [src]="patient | patientImage" [alt]="patient.name">
+
+  <mat-card-content class="mt-2">
+    <h4>Identificación: {{ patient.id }}</h4>
+    <p>
+      <strong> Correo </strong> {{ patient.email }}
+      <br>
+      <strong> Teléfono </strong> {{ patient.firstPhoneNumber }}
+      <strong *ngIf="patient.secondPhoneNumber"> - </strong> {{ patient.secondPhoneNumber }}
+      <br>
+      <mat-chip-listbox *ngIf="patient.patology">
+        <mat-chip *ngFor="let name of patient.patology.split(',') | slice:0:3">
+          {{ name }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+
+    <button mat-button
+      mat-raised
+      color="primary"
+      [routerLink]="['/patient/edit', patient.id]">
+      <mat-icon>edit</mat-icon>
+      Editar
+    </button>
+
+    <span class="spacer"></span>
+
+    <button mat-button
+      mat-raised
+      [routerLink]="['/patient', patient.id]">
+      <mat-icon>more_horiz</mat-icon>
+      Más
+    </button>
+
+  </mat-card-actions>
+
+</mat-card>

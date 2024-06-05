@@ -1,0 +1,107 @@
+<h1>
+  {{ currentEquipmentToUpdate ? 'Editar' : 'Agregar'}}
+  <small>Equipo médico</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+
+        <form class="grid" [formGroup]="equipmentForm" (ngSubmit)="onSubmit()">
+
+          <mat-form-field class="col-12">
+            <mat-label>Número de salón</mat-label>
+            <input
+              matInput
+              type="number"
+              required
+              pattern="\d*"
+              inputmode="numeric"
+              formControlName="salonNumber"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="name"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Proveedor</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="provider"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Cantidad disponible</mat-label>
+            <input
+              matInput
+              type="number"
+              required
+              formControlName="amount"
+            />
+          </mat-form-field>
+
+
+
+        </form>
+
+        <div class="flex justify-content-between">
+          <button
+          *ngIf="currentEquipmentToUpdate"
+            mat-flat-button
+            color="warn"
+            (click)="onDeleteEquipment()"
+          >
+            Borrar
+          </button>
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="onSubmit()"
+          >
+            <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-12 sm:col-6">
+
+    <mat-card>
+      <img src="assets\medical-equipment.png" alt="no-image" mat-card-image>
+    </mat-card>
+
+  </div>
+</div>
+
+<pre>
+  Formulario valido: {{ equipmentForm.valid | json }}
+</pre>
+
+<pre>
+  {{ currentEquipment | json }}
+</pre>
+
+<pre>
+  currentEquipmentToUpdate: {{ currentEquipmentToUpdate | json }}
+</pre>
+

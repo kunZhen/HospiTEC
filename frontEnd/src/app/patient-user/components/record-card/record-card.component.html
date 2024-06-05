@@ -1,0 +1,35 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> {{ record.procedure[0].name }} </mat-card-title>
+    <mat-card-title></mat-card-title>
+  </mat-card-header>
+
+  <!-- TODO: Imagen  -->
+  <!-- {{ patient | patientImage }} -->
+  <img mat-card-image src="assets\medical-procedure.png" [alt]="record.id">
+
+  <mat-card-content class="mt-2">
+    <h4> Fecha: {{ record.date | date: 'MM/dd/yyyy' }} </h4>
+    <p>
+      <strong> Descripción: </strong> {{ record.procedure[0].description }}
+      <br>
+    </p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+
+    <span class="spacer"></span>
+
+    <button mat-button
+      mat-raised
+      color="primary"
+      [routerLink]="['/patient-user/records/grade', record.id]">
+      <mat-icon>check</mat-icon>
+      Evaluar
+    </button>
+
+  </mat-card-actions>
+
+</mat-card>

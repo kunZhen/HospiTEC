@@ -1,0 +1,119 @@
+<h1>
+  {{ currentSalonToUpdate ? 'Editar' : 'Agregar'}}
+  <small>salón</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+
+        <form class="grid" [formGroup]="salonForm" (ngSubmit)="onSubmit()">
+
+          <mat-form-field class="col-12">
+            <mat-label>Número de salón</mat-label>
+            <input
+              matInput
+              type="number"
+              required
+              pattern="\d*"
+              inputmode="numeric"
+              formControlName="id"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="name"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Capacidad</mat-label>
+            <input
+              matInput
+              type="number"
+              required
+              formControlName="capacity"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Piso</mat-label>
+            <input
+              matInput
+              type="number"
+              required
+              formControlName="floor"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Tipo</mat-label>
+            <mat-select
+              formControlName="type"
+              required
+            >
+              <mat-option *ngFor="let type of types"
+                [value]="type.id">
+                {{ type.desc }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+
+        </form>
+
+        <div class="flex justify-content-between">
+          <button
+          *ngIf="currentSalonToUpdate"
+            mat-flat-button
+            color="warn"
+            (click)="onDeleteSalon()"
+          >
+            Borrar
+          </button>
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="onSubmit()"
+          >
+            <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-12 sm:col-6">
+
+    <mat-card>
+      <img src="assets\medical-salon.jpg" alt="no-image" mat-card-image>
+    </mat-card>
+
+  </div>
+</div>
+
+<pre>
+  Formulario valido: {{ salonForm.valid | json }}
+</pre>
+
+<pre>
+  {{ currentSalon | json }}
+</pre>
+
+<pre>
+  currentSalonToUpdate: {{ currentSalonToUpdate | json }}
+</pre>
+

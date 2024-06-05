@@ -1,0 +1,39 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ bed.id }}</mat-card-title>
+    <mat-card-subtitle>Salon {{ bed.salonNumber }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <!-- TODO: Imagen  -->
+  <img mat-card-image src="assets\medical-bed.png" [alt]="bed.id">
+
+  <mat-card-content class="mt-2">
+    <!-- <h4>Salón: {{  }}</h4> -->
+    <p>
+      <!-- <strong> Disponibilidad: </strong> {{ equipment.amount }} -->
+      <br>
+      <mat-chip-listbox *ngIf="bed.equipments">
+        <mat-chip *ngFor="let equipment of equipments">
+          {{ equipment.name }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </p>
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+
+    <button mat-button
+      mat-raised
+      color="primary"
+      [routerLink]="['/administrative-staff/bed/edit', bed.id  ]">
+      <mat-icon>edit</mat-icon>
+      Editar
+    </button>
+
+    <span class="spacer"></span>
+
+  </mat-card-actions>
+
+</mat-card>

@@ -1,0 +1,92 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1" rowHeight="2:1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="patient; else divLoading" class="grid p-2">
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+      <mat-card-title>{{ patient.name }}</mat-card-title>
+      <mat-card-subtitle>{{ patient.firstLastName }} {{ patient.secondLastName }}</mat-card-subtitle>
+    </mat-card-header>
+
+
+    <img [src]="patient | patientImage" [alt]="patient.name" mat-card-image  />
+
+  </mat-card>
+
+  <mat-card class="col-12 sm:col-6">
+
+    <mat-card-header>
+      <mat-card-title>Información</mat-card-title>
+      <mat-card-subtitle>{{ patient.id }}</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-list>
+
+        <mat-list-item>
+          <strong>Correo:</strong>
+          {{ patient.email }}
+        </mat-list-item>
+
+        <mat-list-item>
+          <strong>Fecha de nacimiento:</strong>
+          {{ patient.birthDate | date: 'MM/dd/yyyy'}}
+        </mat-list-item>
+
+        <mat-list-item>
+          <strong>Dirección:</strong>
+          {{ patient.address }}
+        </mat-list-item>
+
+        <mat-list-item>
+          <strong>Telefono principal:</strong>
+          {{ patient.firstPhoneNumber }}
+        </mat-list-item>
+
+        <mat-list-item>
+          <strong>Telefono secundario:</strong>
+          {{ patient.secondPhoneNumber }}
+        </mat-list-item>
+
+        <br>
+
+        <strong *ngIf="patient.patology">Patologías:</strong>
+        <mat-chip-listbox *ngIf="patient.patology">
+          <mat-chip *ngFor="let name of patient.patology.split(',')">
+            {{ name }}
+          </mat-chip>
+        </mat-chip-listbox>
+
+        <strong *ngIf="patient.treatment">Tratamiento:</strong>
+        <mat-chip-listbox *ngIf="patient.treatment">
+          <mat-chip *ngFor="let name of patient.treatment.split(',')">
+            {{ name }}
+          </mat-chip>
+        </mat-chip-listbox>
+
+      </mat-list>
+
+      <button
+        mat-button
+        color="warn"
+        (click)="goBack()"
+      >
+        Regresar
+      </button>
+
+    </mat-card-content>
+
+
+  </mat-card>
+
+  <list-record-page></list-record-page>
+
+
+</div>

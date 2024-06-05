@@ -1,0 +1,704 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "usuario": "John Doe",
+      "email": "john.due@gmail.com"
+    }
+  ],
+  "admin": [
+    {
+      "id": 789564123,
+      "name": "Jane Smith",
+      "firstLastName": "Gomez",
+      "secondLastName": "Martinez",
+      "email": "jane.smith@admin.sa.cr",
+      "password": "1234",
+      "address": "Avenida 2",
+      "firstPhoneNumber": "89765432",
+      "secondPhoneNumber": "83456789"
+    },
+    {
+      "id": 196859623,
+      "name": "Carlos Rivera",
+      "firstLastName": "Jimenez",
+      "secondLastName": "Fernandez",
+      "email": "carlos.rivera@admin.sa.cr",
+      "password": "1234",
+      "address": "Calle 3",
+      "firstPhoneNumber": "81234567",
+      "secondPhoneNumber": "82345678"
+    }
+  ],
+  "doctor": [
+    {
+      "id": 1,
+      "name": "John Doe",
+      "firstLastName": "Perez",
+      "secondLastName": "Lopez",
+      "email": "john.due@ccss.sa.cr",
+      "password": "1234",
+      "address": "Calle 1",
+      "firstPhoneNumber": "88776655",
+      "secondPhoneNumber": "88447788"
+    },
+    {
+      "id": 2,
+      "name": "Jane Smith",
+      "firstLastName": "Garcia",
+      "secondLastName": "Rodriguez",
+      "email": "jane.smith@ccss.sa.cr",
+      "password": "doctor123",
+      "address": "Main Street 123",
+      "firstPhoneNumber": "5551234567",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 3,
+      "name": "Michael Williams",
+      "firstLastName": "Hernandez",
+      "secondLastName": "Diaz",
+      "email": "michael.williams@ccss.sa.cr",
+      "password": "heal2024",
+      "address": "Maple Avenue 456",
+      "firstPhoneNumber": "5557890123",
+      "secondPhoneNumber": "5554567890"
+    },
+    {
+      "id": 4,
+      "name": "Ashley Miller",
+      "firstLastName": "Lee",
+      "secondLastName": "Kim",
+      "email": "ashley.miller@ccss.sa.cr",
+      "password": "care4you",
+      "address": "Park Lane 789",
+      "firstPhoneNumber": "5550987654",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 5,
+      "name": "David Johnson",
+      "firstLastName": "Wang",
+      "secondLastName": "Chen",
+      "email": "david.johnson@ccss.sa.cr",
+      "password": "doctorDJ",
+      "address": "Elm Street 1011",
+      "firstPhoneNumber": "5552345678",
+      "secondPhoneNumber": "5559876543"
+    },
+    {
+      "id": 6,
+      "name": "Sarah Wilson",
+      "firstLastName": "Gonzalez",
+      "secondLastName": "Allen",
+      "email": "sarah.wilson@ccss.sa.cr",
+      "password": "healthy123",
+      "address": "Birch Road 234",
+      "firstPhoneNumber": "5555678901",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 7,
+      "name": "Richard Moore",
+      "firstLastName": "Young",
+      "secondLastName": "Brown",
+      "email": "richard.moore@ccss.sa.cr",
+      "password": "healthexpert",
+      "address": "Pine Street 567",
+      "firstPhoneNumber": "5551011123",
+      "secondPhoneNumber": "5553456789"
+    },
+    {
+      "id": 8,
+      "name": "Amanda Garcia",
+      "firstLastName": "Nelson",
+      "secondLastName": "Clark",
+      "email": "amanda.garcia@ccss.sa.cr",
+      "password": "carenow",
+      "address": "Oak Avenue 890",
+      "firstPhoneNumber": "5556789012",
+      "secondPhoneNumber": ""
+    },
+    {
+      "id": 9,
+      "name": "Daniel Thomas",
+      "firstLastName": "Scott",
+      "secondLastName": "Mitchell",
+      "email": "daniel.thomas@ccss.sa.cr",
+      "password": "doctorDT",
+      "address": "Spruce Street 1213",
+      "firstPhoneNumber": "5557890098",
+      "secondPhoneNumber": "5555678012"
+    },
+    {
+      "id": 10,
+      "name": "Jennifer Lopez",
+      "firstLastName": "Lewis",
+      "secondLastName": "Robinson",
+      "email": "jennifer.lopez@ccss.sa.cr",
+      "password": "healwithus",
+      "address": "Willow Street 1516",
+      "firstPhoneNumber": "5558901234",
+      "secondPhoneNumber": ""
+    }
+  ],
+  "evaluation": [
+    {
+      "recordId": "1",
+      "cleanlinessComment": "Hace falta limpiar varias zonas",
+      "cleanlinessRate": 3,
+      "staffTreatmentComment": "Buen trato por parte del personal",
+      "staffTreatmentRate": 5,
+      "appointmentPunctualityComment": "Tardaron 10 minutos en atenderme",
+      "appointmentPunctualityRate": 4,
+      "id": 1
+    }
+  ],
+  "patients": [
+    {
+      "id": 123456789,
+      "name": "Carlos",
+      "firstLastName": "Perez",
+      "secondLastName": "Lopez",
+      "firstPhoneNumber": "88776655",
+      "secondPhoneNumber": "88447788",
+      "email": "carlos.perez@gmail.com",
+      "password": "1234",
+      "address": "Calle 2",
+      "birthDate": "1985-05-02T06:00:00.000Z",
+      "patology": "Asma, Alergias",
+      "treatment": "Inhaladores, Antihistamínicos"
+    },
+    {
+      "id": 987654321,
+      "name": "Lucia",
+      "firstLastName": "Rodriguez",
+      "secondLastName": "Garcia",
+      "firstPhoneNumber": "88223344",
+      "secondPhoneNumber": "88112233",
+      "email": "lucia.rodriguez@gmail.com",
+      "password": "1234",
+      "address": "Calle 3",
+      "birthDate": "1995-07-04T06:00:00.000Z",
+      "patology": "Hipertension",
+      "treatment": "Beta bloqueadores"
+    },
+    {
+      "id": 192837465,
+      "name": "Miguel",
+      "firstLastName": "Fernandez",
+      "secondLastName": "Ruiz",
+      "firstPhoneNumber": "88664422",
+      "secondPhoneNumber": "88001122",
+      "email": "miguel.fernandez@gmail.com",
+      "password": "1234",
+      "address": "Calle 4",
+      "birthDate": "1978-11-15T06:00:00.000Z",
+      "patology": "Diabetes",
+      "treatment": "Insulina"
+    },
+    {
+      "id": 102938475,
+      "name": "Juan",
+      "firstLastName": "Gomez",
+      "secondLastName": "Hernandez",
+      "firstPhoneNumber": "88335577",
+      "secondPhoneNumber": "88119933",
+      "email": "ana.gomez@gmail.com",
+      "password": "1234",
+      "address": "Calle 5",
+      "birthDate": "2000-03-02T06:00:00.000Z",
+      "patology": "Epilepsia",
+      "treatment": "Anticonvulsivos"
+    },
+    {
+      "id": 564738291,
+      "name": "Pedro",
+      "firstLastName": "Ramirez",
+      "secondLastName": "Diaz",
+      "firstPhoneNumber": "88005566",
+      "secondPhoneNumber": "88448899",
+      "email": "pedro.ramirez@gmail.com",
+      "password": "1234",
+      "address": "Calle 6",
+      "birthDate": "1982-08-13T06:00:00.000Z",
+      "patology": "Artritis",
+      "treatment": "Analgesicos, Anti-inflamatorios"
+    },
+    {
+      "id": 384756192,
+      "name": "Laura",
+      "firstLastName": "Torres",
+      "secondLastName": "Jimenez",
+      "firstPhoneNumber": "88227744",
+      "secondPhoneNumber": "88113322",
+      "email": "laura.torres@gmail.com",
+      "password": "1234",
+      "address": "Calle 7",
+      "birthDate": "1993-12-15T06:00:00.000Z",
+      "patology": "Migraña",
+      "treatment": "Triptanes, Analgesicos"
+    },
+    {
+      "id": 746281930,
+      "name": "Javier",
+      "firstLastName": "Gonzalez",
+      "secondLastName": "Mendoza",
+      "firstPhoneNumber": "88114455",
+      "secondPhoneNumber": "88002233",
+      "email": "javier.gonzalez@gmail.com",
+      "password": "1234",
+      "address": "Calle 8",
+      "birthDate": "1975-04-17T06:00:00.000Z",
+      "patology": "Hipertension, Colesterol alto",
+      "treatment": "Estatinas, Inhibidores ECA"
+    },
+    {
+      "id": 564738192,
+      "name": "Diego",
+      "firstLastName": "Lopez",
+      "secondLastName": "Vargas",
+      "firstPhoneNumber": "88996677",
+      "secondPhoneNumber": "88775566",
+      "email": "sofia.lopez@gmail.com",
+      "password": "1234",
+      "address": "Calle 9",
+      "birthDate": "1998-10-08T06:00:00.000Z",
+      "patology": "Asma",
+      "treatment": "Inhaladores, Corticoides"
+    },
+    {
+      "id": 475869302,
+      "name": "Lorena",
+      "firstLastName": "Martinez",
+      "secondLastName": "Pena",
+      "firstPhoneNumber": "88338844",
+      "secondPhoneNumber": "88227788",
+      "email": "jose.martinez@gmail.com",
+      "password": "1234",
+      "address": "Calle 10",
+      "birthDate": "1987-03-05T06:00:00.000Z",
+      "patology": "Gastritis",
+      "treatment": "Antiácidos, Inhibidores de la bomba de protones"
+    },
+    {
+      "id": "656565253",
+      "name": "fsdfsd",
+      "firstLastName": "dsfdsf",
+      "secondLastName": "dsfsdf",
+      "firstPhoneNumber": "78578525",
+      "secondPhoneNumber": "57575787",
+      "email": "k@gmail.com",
+      "address": "dsfsdf",
+      "birthDate": "2004-01-01T00:00:00.000Z",
+      "patology": "",
+      "treatment": "",
+      "alt_img": "no-image"
+    },
+    {
+      "id": "798798789",
+      "name": "gdfgdfg",
+      "firstLastName": "fgdfgdf",
+      "secondLastName": "fdgvd",
+      "firstPhoneNumber": "66876986",
+      "secondPhoneNumber": "86868976",
+      "email": "l@gmai.com",
+      "address": "dfsfsd",
+      "birthDate": "2003-12-16T06:00:00.000Z",
+      "patology": "",
+      "treatment": "",
+      "alt_img": "no-image"
+    }
+  ],
+  "salon": [
+    {
+      "id": 101,
+      "name": "Sala A",
+      "capacity": 10,
+      "type": "Mujeres",
+      "floor": 1
+    },
+    {
+      "id": 102,
+      "name": "Sala B",
+      "capacity": 8,
+      "type": "Hombres",
+      "floor": 2
+    },
+    {
+      "id": 103,
+      "name": "Sala C",
+      "capacity": 12,
+      "type": "Niños",
+      "floor": 2
+    },
+    {
+      "id": 104,
+      "name": "Sala D",
+      "capacity": 15,
+      "type": "Mujeres",
+      "floor": 3
+    },
+    {
+      "id": 109,
+      "name": "Salon 50",
+      "capacity": 30,
+      "type": "Niños",
+      "floor": 5
+    }
+  ],
+  "equipment": [
+    {
+      "id": 1,
+      "salonNumber": 101,
+      "name": "Luces Quirúrgicas",
+      "provider": "MedEquip",
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "salonNumber": 102,
+      "name": "Ultrasonidos",
+      "provider": "HealthPro",
+      "amount": 2
+    },
+    {
+      "id": 3,
+      "salonNumber": 103,
+      "name": "Esterilizadores",
+      "provider": "CleanMed",
+      "amount": 4
+    },
+    {
+      "id": 4,
+      "salonNumber": 104,
+      "name": "Desfibriladores",
+      "provider": "CardioTech",
+      "amount": 6
+    },
+    {
+      "id": 5,
+      "salonNumber": 105,
+      "name": "Monitores",
+      "provider": "VitalMed",
+      "amount": 7
+    },
+    {
+      "id": 6,
+      "salonNumber": 106,
+      "name": "Respiradores Artificiales",
+      "provider": "BreatheEasy",
+      "amount": 3
+    },
+    {
+      "id": 7,
+      "salonNumber": 107,
+      "name": "Electrocardiógrafos",
+      "provider": "HeartBeat",
+      "amount": 5
+    }
+  ],
+  "bed": [
+    {
+      "id": 1,
+      "salonNumber": 101,
+      "number": 1,
+      "cui": "UCI"
+    },
+    {
+      "id": 2,
+      "salonNumber": 101,
+      "number": 2,
+      "cui": "UCI"
+    },
+    {
+      "id": 3,
+      "salonNumber": 102,
+      "number": 1,
+      "cui": "No"
+    },
+    {
+      "id": 4,
+      "salonNumber": 102,
+      "number": 2,
+      "cui": "No"
+    },
+    {
+      "id": 5,
+      "salonNumber": 103,
+      "number": 1,
+      "cui": "No"
+    },
+    {
+      "id": 6,
+      "salonNumber": 103,
+      "number": 2,
+      "cui": "No"
+    },
+    {
+      "id": 7,
+      "salonNumber": 104,
+      "number": 1,
+      "cui": "UCI"
+    },
+    {
+      "id": 8,
+      "salonNumber": 104,
+      "number": 2,
+      "cui": "UCI"
+    },
+    {
+      "id": 9,
+      "salonNumber": 105,
+      "number": 1,
+      "cui": "No"
+    },
+    {
+      "id": 10,
+      "salonNumber": 105,
+      "number": 2,
+      "cui": "No"
+    }
+  ],
+  "records": [
+    {
+      "id": "1",
+      "patientId": 123456789,
+      "date": "2003-12-16T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Vacunación antirrábica",
+          "description": "Aplicación de vacuna contra la rabia"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "patientId": 123456789,
+      "date": "2004-01-08T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Desparasitación",
+          "description": "Administración de antiparasitarios"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "patientId": 123456789,
+      "date": "2004-02-20T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Chequeo general",
+          "description": "Examen físico completo"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "patientId": 123456789,
+      "date": "2004-03-15T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Limpieza dental",
+          "description": "Limpieza y revisión dental. Calzas nuevas"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "patientId": 123456789,
+      "date": "2004-04-28T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugía menor",
+          "description": "Extracción de cuerpo extraño"
+        }
+      ]
+    },
+    {
+      "id": "397",
+      "patientId": "987654321",
+      "date": "2024-06-29T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugia menor",
+          "description": "Extraccion de muela de juicio"
+        }
+      ]
+    },
+    {
+      "id": "398",
+      "patientId": "987654321",
+      "date": "2024-06-29T06:00:00.000Z",
+      "procedure": [
+        {
+          "name": "Cirugia menor",
+          "description": "Extraccion de muela de juicio"
+        }
+      ]
+    }
+  ],
+  "heroes": [
+    {
+      "id": "dc-batman",
+      "superhero": "Batman",
+      "publisher": "DC Comics",
+      "alter_ego": "Bruce Wayne",
+      "first_appearance": "Detective Comics #27",
+      "characters": "Bruce Wayne"
+    },
+    {
+      "id": "dc-superman",
+      "superhero": "Superman",
+      "publisher": "DC Comics",
+      "alter_ego": "Kal-El",
+      "first_appearance": "Action Comics #1",
+      "characters": "Kal-El"
+    },
+    {
+      "id": "dc-flash",
+      "superhero": "Flash",
+      "publisher": "DC Comics",
+      "alter_ego": "Jay Garrick",
+      "first_appearance": "Flash Comics #1",
+      "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
+    },
+    {
+      "id": "dc-green",
+      "superhero": "Green Lantern",
+      "publisher": "DC Comics",
+      "alter_ego": "Alan Scott",
+      "first_appearance": "All-American Comics #16",
+      "characters": "Alan Scott, Hal Jordan, Guy Gardner, John Stewart, Kyle Raynor, Jade, Sinestro, Simon Baz"
+    },
+    {
+      "id": "dc-arrow",
+      "superhero": "Green Arrow",
+      "publisher": "DC Comics",
+      "alter_ego": "Oliver Queen",
+      "first_appearance": "More Fun Comics #73",
+      "characters": "Oliver Queen"
+    },
+    {
+      "id": "dc-wonder",
+      "superhero": "Wonder Woman",
+      "publisher": "DC Comics",
+      "alter_ego": "Princess Diana",
+      "first_appearance": "All Star Comics #8",
+      "characters": "Princess Diana"
+    },
+    {
+      "id": "dc-martian",
+      "superhero": "Martian Manhunter",
+      "publisher": "DC Comics",
+      "alter_ego": "J\"onn J\"onzz",
+      "first_appearance": "Detective Comics #225",
+      "characters": "Martian Manhunter"
+    },
+    {
+      "id": "dc-robin",
+      "superhero": "Robin/Nightwing",
+      "publisher": "DC Comics",
+      "alter_ego": "Dick Grayson",
+      "first_appearance": "Detective Comics #38",
+      "characters": "Dick Grayson"
+    },
+    {
+      "id": "dc-blue",
+      "superhero": "Blue Beetle",
+      "publisher": "DC Comics",
+      "alter_ego": "Dan Garret",
+      "first_appearance": "Mystery Men Comics #1",
+      "characters": "Dan Garret, Ted Kord, Jaime Reyes"
+    },
+    {
+      "id": "dc-black",
+      "superhero": "Black Canary",
+      "publisher": "DC Comics",
+      "alter_ego": "Dinah Drake",
+      "first_appearance": "Flash Comics #86",
+      "characters": "Dinah Drake, Dinah Lance"
+    },
+    {
+      "id": "marvel-spider",
+      "superhero": "Spider Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Peter Parker",
+      "first_appearance": "Amazing Fantasy #15",
+      "characters": "Peter Parker"
+    },
+    {
+      "id": "marvel-captain",
+      "superhero": "Captain America",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Steve Rogers",
+      "first_appearance": "Captain America Comics #1",
+      "characters": "Steve Rogers"
+    },
+    {
+      "id": "marvel-iron",
+      "superhero": "Iron Man",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Tony Stark",
+      "first_appearance": "Tales of Suspense #39",
+      "characters": "Tony Stark"
+    },
+    {
+      "id": "marvel-thor",
+      "superhero": "Thor",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Thor Odinson",
+      "first_appearance": "Journey into Myster #83",
+      "characters": "Thor Odinson"
+    },
+    {
+      "id": "marvel-hulk",
+      "superhero": "Hulk",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Bruce Banner",
+      "first_appearance": "The Incredible Hulk #1",
+      "characters": "Bruce Banner"
+    },
+    {
+      "id": "marvel-wolverine",
+      "superhero": "Wolverine",
+      "publisher": "Marvel Comics",
+      "alter_ego": "James Howlett",
+      "first_appearance": "The Incredible Hulk #180",
+      "characters": "James Howlett"
+    },
+    {
+      "id": "marvel-daredevil",
+      "superhero": "Daredevil",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Matthew Michael Murdock",
+      "first_appearance": "Daredevil #1",
+      "characters": "Matthew Michael Murdock"
+    },
+    {
+      "id": "marvel-hawkeye",
+      "superhero": "Hawkeye",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Clinton Francis Barton",
+      "first_appearance": "Tales of Suspense #57",
+      "characters": "Clinton Francis Barton"
+    },
+    {
+      "id": "marvel-cyclops",
+      "superhero": "Cyclops",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Scott Summers",
+      "first_appearance": "X-Men #1",
+      "characters": "Scott Summers"
+    },
+    {
+      "id": "marvel-silver",
+      "superhero": "Silver Surfer",
+      "publisher": "Marvel Comics",
+      "alter_ego": "Norrin Radd",
+      "first_appearance": "The Fantastic Four #48",
+      "characters": "Norrin Radd"
+    }
+  ]
+}
