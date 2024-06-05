@@ -5,7 +5,6 @@
   </mat-card-header>
 
   <!-- TODO: Imagen  -->
-  <!-- {{ patient | patientImage }} -->
   <img mat-card-image src="assets\medical-salon.jpg" [alt]="salon.name">
 
   <mat-card-content class="mt-2">
@@ -28,7 +27,7 @@
     <button mat-button
       mat-raised
       color="primary"
-      [routerLink]="['/salon/edit', salon.number]">
+      [routerLink]="['/administrative-staff/salon/edit', salon.number]">
       <mat-icon>edit</mat-icon>
       Editar
     </button>
