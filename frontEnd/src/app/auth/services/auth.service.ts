@@ -10,6 +10,7 @@ import { Observable, catchError, map, of, tap } from 'rxjs';
 export class AuthService {
 
   private readonly baseUrl: string = environments.baseUrl;
+  private readonly baseUrlprod: string = environments.baseUrlprod;
   private http = inject(HttpClient);
   httpParams: any;
 
@@ -30,7 +31,7 @@ export class AuthService {
         tap(users => {
           if (users.length > 0) {
             this.user = users[0];
-            localStorage.setItem('token', this.user.id);
+            localStorage.setItem('token', this.user.identification_number);
           }
         }),
         map(users => users.length > 0)
@@ -38,18 +39,26 @@ export class AuthService {
   }
 
   logInPatient(email: string, password: string) {
-    const url = `${this.baseUrl}/patients?email=${email}&password=${password}`;
+    const url = `${this.baseUrlprod}/patient/login/${email}/${password}`;
 
-    return this.http.get<User[]>(url)
+    return this.http.get<User>(url)
       .pipe(
         tap(users => {
-          if (users.length > 0) {
-            this.user = users[0];
-            localStorage.setItem('token', this.user.id);
+          if (users) {
+            this.user = users;
+            localStorage.setItem('token', this.user.identification_number);
+            console.log(users);
           }
         }),
-        map(users => users.length > 0)
+        map(users => !!users)
       );
+  }
+
+  loginPatient2(email: string, password: string) {
+    const url = `${this.baseUrlprod}/patient/login/${email}/${password}`;
+
+    return this.http.get(url);
+
   }
 
   logInAdmin(email: string, password: string) {
@@ -60,7 +69,7 @@ export class AuthService {
         tap(users => {
           if (users.length > 0) {
             this.user = users[0];
-            localStorage.setItem('token', this.user.id);
+            localStorage.setItem('token', this.user.identification_number);
           }
         }),
         map(users => users.length > 0)

@@ -16,13 +16,15 @@ export class LoginPageComponent {
   ) { }
 
   public loginForm = this.fb.group({
-    email: ['jane.smith@admin.sa.cr', [Validators.required, Validators.email]],
-    password: ['1234', [Validators.required]]
+    email: ['laura@example.com', [Validators.required, Validators.email]],
+    password: ['mypassword123', [Validators.required]]
   });
 
   // jane.smith@admin.sa.cr
   // john.due@ccss.sa.cr
-  // carlos.perez@gmail.com
+
+  // laura@example.com
+  // mypassword123
 
   onLogin() {
 
@@ -31,6 +33,10 @@ export class LoginPageComponent {
     }
 
     const { email, password } = this.loginForm.value;
+
+    this.authService.loginPatient2(email!, password!).subscribe( patient => {
+      console.log(patient);
+    });
 
     if ( email?.endsWith('@ccss.sa.cr') ) {
       this.authService.logInDoctor(email!, password!).subscribe( success => {

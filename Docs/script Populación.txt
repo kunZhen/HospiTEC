@@ -1,0 +1,85 @@
+-- Insertar datos en la tabla patient
+INSERT INTO patient (identification_number, name, "fLastName", "sLastName", birthdate, address, email, password, "user")
+VALUES 
+('12345673000890', 'Juan', 'Perez', 'Gonzalez', '1990-05-15', 'Calle 123, Ciudad', 'juan@example.com', 'password123', 'juanito'),
+('987654323310', 'Maria', 'Lopez', 'Martinez', '1985-10-20', 'Av. Principal, Pueblo', 'maria@example.com', 'password456', 'marialo');
+
+-- Insertar datos en la tabla phone
+INSERT INTO phone (phoneNumber, patientID)
+VALUES 
+('123234567890', '12345673000890'),
+('098762354321', '987654323310');
+
+-- Insertar datos en la tabla Rol
+INSERT INTO Rol (ID, description)
+VALUES 
+(6, 'Administrador'),
+(7, 'Médico'),
+(8, 'Enfermero');
+
+-- Insertar datos en la tabla procedure
+INSERT INTO procedure (name, description, duration)
+VALUES 
+('Consulta', 'Consulta médica general', 30),
+('Examen de sangre', 'Análisis de sangre', 60),
+('Radiografía', 'Radiografía de torax', 45);
+
+-- Insertar datos en la tabla roomType
+INSERT INTO roomType (id, description)
+VALUES 
+('1', 'Habitación individual'),
+('2', 'Habitación compartida');
+
+-- Insertar datos en la tabla room
+INSERT INTO room (number, name, capacity, floor, "roomTypeID")
+VALUES 
+(101, 'Habitación 101', 1, 1, '1'),
+(201, 'Habitación 201', 2, 2, '2');
+
+-- Insertar datos en la tabla personal
+INSERT INTO personal (identificationNumber, name, "fLastName", "sLastName", birthDate, address, email, password, "hireDate", rolID)
+VALUES 
+('0123456789', 'Carlos', 'Garcia', 'Lopez', '1980-03-10', 'Calle Principal, Ciudad', 'carlos@example.com', 'password789', '2020-01-15', 2),
+('5432109876', 'Ana', 'Ruiz', 'Martinez', '1995-07-20', 'Av. Central, Pueblo', 'ana@example.com', 'passwordABC', '2019-05-05', 3);
+
+-- Insertar datos en la tabla pathology
+INSERT INTO pathology (id, name, description)
+VALUES 
+('1', 'Gripe', 'Infección respiratoria vírica'),
+('2', 'Fractura de brazo', 'Rotura en el hueso del brazo');
+
+-- Insertar datos en la tabla clinicHistory
+INSERT INTO clinicHistory (id, date, procedure_name, personal_id, patient_id)
+VALUES 
+('CH1', '2024-05-01', 'Consulta', '0123456789', NULL),
+('CH2', '2024-05-05', 'Examen de sangre', NULL, '12345673000890');
+
+-- Insertar datos en la tabla treatment
+INSERT INTO treatment (id, description, date, clinicHistory_id, pathology_id)
+VALUES 
+('T1', 'Receta para medicamento', '2024-05-01', 'CH1', '1'),
+('T2', 'Inmovilización del brazo', '2024-05-05', 'CH2', '2');
+
+-- Insertar datos en la tabla medicine
+INSERT INTO medicine (name, description, treatment_id)
+VALUES 
+('Paracetamol', 'Analgesico y antipiretico', 'T1'),
+('Ibuprofeno', 'Antiinflamatorio no esteroideo', 'T1');
+
+-- Insertar datos en la tabla bed
+INSERT INTO bed (bedNumber, uci, roomNumber)
+VALUES 
+(1, true, 101),
+(2, false, 201);
+
+-- Insertar datos en la tabla equipment
+INSERT INTO equipment (plate, provider, amount, bedNumber)
+VALUES 
+('EQ001', 'Proveedor A', '10 unidades', 1),
+('EQ002', 'Proveedor B', '5 unidades', 2);
+
+-- Insertar datos en la tabla reservation
+INSERT INTO reservation (ID, dischargeDate, bedNumber, identificationNumber)
+VALUES 
+(1, '2024-05-10', 1, '1234567890'),
+(2, '2024-05-15', 2, '12345673000890');

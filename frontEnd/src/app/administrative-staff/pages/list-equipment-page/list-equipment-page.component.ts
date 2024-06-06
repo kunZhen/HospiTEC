@@ -13,6 +13,10 @@ export class ListEquipmentPageComponent implements OnInit {
 
   constructor( private equipmentService: EquipmentService ) { }
 
+  /**
+   * The `ngOnInit` function in TypeScript initializes the component by fetching equipment data from a
+   * service and assigning it to a component property.
+   */
   ngOnInit(): void {
     this.equipmentService.getEquipment().subscribe( equipment => {
       this.equipments = equipment;

@@ -31,10 +31,19 @@ export class LayoutPageComponent {
     private router: Router
   ) { }
 
+  /**
+   * This function returns the current user authenticated by the authService, or undefined if no user
+   * is authenticated.
+   * @returns The `get user()` method is returning the current user authenticated by the `authService`,
+   * which is of type `User` or `undefined` if there is no authenticated user.
+   */
   get user(): User | undefined {
     return this.authService.currentUser;
   }
 
+  /**
+   * The `onLogout` function logs out the user and navigates to the login page.
+   */
   onLogout() {
     this.authService.logout();
     this.router.navigate(['/auth/login']);
