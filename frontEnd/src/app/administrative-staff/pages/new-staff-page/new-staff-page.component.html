@@ -1,1 +1,145 @@
-<p>new-staff-page works!</p>
+<h1>
+  {{ currentStaffToUpdate ? 'Editar' : 'Agregar'}}
+  <small>Personal</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+
+        <form class="grid" [formGroup]="staffForm" (ngSubmit)="onSubmit()">
+
+          <mat-form-field class="col-12">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="firstName"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Apellido</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="lastName"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Identificación</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="idNumber"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Teléfono principal</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              maxlength="8"
+              pattern="\d*"
+              inputmode="numeric"
+              formControlName="phone"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Dirección</mat-label>
+            <input
+              matInput
+              type="text"
+              required
+              formControlName="address"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Rol</mat-label>
+            <mat-select
+              formControlName="role"
+              required
+            >
+              <mat-option *ngFor="let role of roles"
+                [value]="role.id">
+                {{ role.desc }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field color="accent" class="col-12">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="dateOfBirth">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+          <mat-form-field color="accent" class="col-12">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker1" formControlName="dateOfEntry">
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+            <mat-datepicker #picker1></mat-datepicker>
+          </mat-form-field>
+
+        </form>
+
+        <div class="flex justify-content-between">
+          <button
+          *ngIf="currentStaffToUpdate"
+            mat-flat-button
+            color="warn"
+            (click)="onDeleteStaff()"
+          >
+            Borrar
+          </button>
+          <span></span>
+
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="onSubmit()"
+          >
+            <mat-icon>save</mat-icon>
+            Guardar
+          </button>
+        </div>
+
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-12 sm:col-6">
+
+    <mat-card>
+      <img src="assets/patient/no-image.png" alt="no-image" mat-card-image>
+    </mat-card>
+
+  </div>
+</div>
+
+<pre>
+  Formulario valido: {{ staffForm.valid | json }}
+</pre>
+
+<pre>
+  {{ currentStaff | json }}
+</pre>
+
+<pre>
+  currentSalonToUpdate: {{ currentStaffToUpdate | json }}
+</pre>
+
