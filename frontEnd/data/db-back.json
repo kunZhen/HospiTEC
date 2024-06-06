@@ -146,7 +146,7 @@
     {
       "recordId": "1",
       "cleanlinessComment": "Hace falta limpiar varias zonas",
-      "cleanlinessRate": 3,
+      "cleanlinessRate": 5,
       "staffTreatmentComment": "Buen trato por parte del personal",
       "staffTreatmentRate": 5,
       "appointmentPunctualityComment": "Tardaron 10 minutos en atenderme",
@@ -310,6 +310,174 @@
       "alt_img": "no-image"
     }
   ],
+  "personal":
+  [
+    {
+      "id": 1,
+      "firstName": "Juan",
+      "lastName": "Pérez",
+      "idNumber": "123456789",
+      "phone": "8888-8888",
+      "address": "San José, Costa Rica",
+      "dateOfBirth": "1980-01-15",
+      "dateOfEntry": "2020-05-20",
+      "role": "doctor"
+    },
+    {
+      "id": 2,
+      "firstName": "María",
+      "lastName": "González",
+      "idNumber": "987654321",
+      "phone": "8777-7777",
+      "address": "Alajuela, Costa Rica",
+      "dateOfBirth": "1975-06-10",
+      "dateOfEntry": "2018-03-12",
+      "role": "nurse"
+    },
+    {
+      "id": 3,
+      "firstName": "Carlos",
+      "lastName": "Ramírez",
+      "idNumber": "456789123",
+      "phone": "8666-6666",
+      "address": "Heredia, Costa Rica",
+      "dateOfBirth": "1985-02-25",
+      "dateOfEntry": "2019-11-01",
+      "role": "administrative"
+    },
+    {
+      "id": 4,
+      "firstName": "Ana",
+      "lastName": "Martínez",
+      "idNumber": "654321987",
+      "phone": "8555-5555",
+      "address": "Cartago, Costa Rica",
+      "dateOfBirth": "1990-08-05",
+      "dateOfEntry": "2021-01-10",
+      "role": "doctor"
+    },
+    {
+      "id": 5,
+      "firstName": "José",
+      "lastName": "López",
+      "idNumber": "321654987",
+      "phone": "8444-4444",
+      "address": "Puntarenas, Costa Rica",
+      "dateOfBirth": "1978-09-20",
+      "dateOfEntry": "2017-04-15",
+      "role": "nurse"
+    },
+    {
+      "id": 6,
+      "firstName": "Laura",
+      "lastName": "Rodríguez",
+      "idNumber": "789123456",
+      "phone": "8333-3333",
+      "address": "Limón, Costa Rica",
+      "dateOfBirth": "1988-11-30",
+      "dateOfEntry": "2016-12-24",
+      "role": "administrative"
+    },
+    {
+      "id": 7,
+      "firstName": "David",
+      "lastName": "Fernández",
+      "idNumber": "159753486",
+      "phone": "8222-2222",
+      "address": "San Carlos, Costa Rica",
+      "dateOfBirth": "1995-03-22",
+      "dateOfEntry": "2022-09-10",
+      "role": "doctor"
+    },
+    {
+      "id": 8,
+      "firstName": "Sofía",
+      "lastName": "Rojas",
+      "idNumber": "951357486",
+      "phone": "8111-1111",
+      "address": "Liberia, Costa Rica",
+      "dateOfBirth": "1983-07-17",
+      "dateOfEntry": "2018-08-05",
+      "role": "nurse"
+    },
+    {
+      "id": 9,
+      "firstName": "Andrés",
+      "lastName": "Méndez",
+      "idNumber": "258963147",
+      "phone": "8000-0000",
+      "address": "Quepos, Costa Rica",
+      "dateOfBirth": "1979-05-18",
+      "dateOfEntry": "2015-02-28",
+      "role": "administrative"
+    },
+    {
+      "id": 10,
+      "firstName": "Isabel",
+      "lastName": "Vargas",
+      "idNumber": "357159486",
+      "phone": "8999-9999",
+      "address": "Escazú, Costa Rica",
+      "dateOfBirth": "1987-12-09",
+      "dateOfEntry": "2020-11-03",
+      "role": "doctor"
+    },
+    {
+      "id": 11,
+      "firstName": "Luis",
+      "lastName": "Castro",
+      "idNumber": "753159486",
+      "phone": "8887-8887",
+      "address": "Tamarindo, Costa Rica",
+      "dateOfBirth": "1984-01-27",
+      "dateOfEntry": "2017-09-25",
+      "role": "nurse"
+    },
+    {
+      "id": 12,
+      "firstName": "Daniela",
+      "lastName": "Sánchez",
+      "idNumber": "456321789",
+      "phone": "8776-8776",
+      "address": "Grecia, Costa Rica",
+      "dateOfBirth": "1992-04-15",
+      "dateOfEntry": "2019-05-16",
+      "role": "administrative"
+    },
+    {
+      "id": 13,
+      "firstName": "Ricardo",
+      "lastName": "Ortiz",
+      "idNumber": "159486753",
+      "phone": "8665-8665",
+      "address": "San Isidro, Costa Rica",
+      "dateOfBirth": "1977-02-14",
+      "dateOfEntry": "2014-03-22",
+      "role": "doctor"
+    },
+    {
+      "id": 14,
+      "firstName": "Paula",
+      "lastName": "Jiménez",
+      "idNumber": "321789654",
+      "phone": "8554-8554",
+      "address": "Santa Ana, Costa Rica",
+      "dateOfBirth": "1993-08-23",
+      "dateOfEntry": "2018-06-30",
+      "role": "nurse"
+    },
+    {
+      "id": 15,
+      "firstName": "Fernando",
+      "lastName": "Morales",
+      "idNumber": "654123987",
+      "phone": "8443-8443",
+      "address": "San Ramón, Costa Rica",
+      "dateOfBirth": "1986-10-19",
+      "dateOfEntry": "2021-12-12",
+      "role": "administrative"
+    }
+  ],
   "salon": [
     {
       "id": 101,
@@ -402,62 +570,176 @@
     {
       "id": 1,
       "salonNumber": 101,
-      "number": 1,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 1,
+          "salonNumber": 101
+        },
+        {
+          "id": 2,
+          "salonNumber": 102
+        }
+      ],
       "cui": "UCI"
     },
     {
       "id": 2,
       "salonNumber": 101,
-      "number": 2,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 1,
+          "salonNumber": 101
+        }
+      ],
       "cui": "UCI"
     },
     {
       "id": 3,
       "salonNumber": 102,
-      "number": 1,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 2,
+          "salonNumber": 102
+        }
+      ],
       "cui": "No"
     },
     {
       "id": 4,
       "salonNumber": 102,
-      "number": 2,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 2,
+          "salonNumber": 102
+        }
+      ],
       "cui": "No"
     },
     {
       "id": 5,
       "salonNumber": 103,
-      "number": 1,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 3,
+          "salonNumber": 103
+        }
+      ],
       "cui": "No"
     },
     {
       "id": 6,
       "salonNumber": 103,
-      "number": 2,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 3,
+          "salonNumber": 103
+        }
+      ],
       "cui": "No"
     },
     {
       "id": 7,
       "salonNumber": 104,
-      "number": 1,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 4,
+          "salonNumber": 104
+        }
+      ],
       "cui": "UCI"
     },
     {
       "id": 8,
       "salonNumber": 104,
-      "number": 2,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 4,
+          "salonNumber": 104
+        }
+      ],
       "cui": "UCI"
     },
     {
       "id": 9,
       "salonNumber": 105,
-      "number": 1,
+      "bedNumber": 1,
+      "equipments": [
+        {
+          "id": 5,
+          "salonNumber": 105
+        }
+      ],
       "cui": "No"
     },
     {
       "id": 10,
       "salonNumber": 105,
-      "number": 2,
+      "bedNumber": 2,
+      "equipments": [
+        {
+          "id": 5,
+          "salonNumber": 105
+        }
+      ],
       "cui": "No"
+    }
+  ],
+  "procedure": [
+    {
+      "id": "1",
+      "name": "Apendicectomía",
+      "description": "Cirugía para remover el apéndice.",
+      "duration": 5
+    },
+    {
+      "id": "2",
+      "name": "Biopsia de mama",
+      "description": "Procedimiento para obtener una muestra de tejido de la mama.",
+      "duration": 3
+    },
+    {
+      "id": "3",
+      "name": "Cirugía de cataratas",
+      "description": "Procedimiento para remover cataratas del ojo.",
+      "duration": 4
+    },
+    {
+      "id": "4",
+      "name": "Cesárea",
+      "description": "Cirugía para el nacimiento de un bebé a través del abdomen.",
+      "duration": 7
+    },
+    {
+      "id": "5",
+      "name": "Histerectomía",
+      "description": "Cirugía para remover el útero.",
+      "duration": 10
+    },
+    {
+      "id": "6",
+      "name": "Cirugía para la lumbalgia",
+      "description": "Procedimiento para tratar el dolor lumbar.",
+      "duration": 6
+    },
+    {
+      "id": "7",
+      "name": "Mastectomía",
+      "description": "Cirugía para remover uno o ambos senos.",
+      "duration": 8
+    },
+    {
+      "id": "8",
+      "name": "Amigdalectomía",
+      "description": "Procedimiento para remover las amígdalas.",
+      "duration": 5
     }
   ],
   "records": [

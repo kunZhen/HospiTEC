@@ -16,7 +16,7 @@ export class LoginPageComponent {
   ) { }
 
   public loginForm = this.fb.group({
-    email: ['john.due@ccss.sa.cr', [Validators.required, Validators.email]],
+    email: ['jane.smith@admin.sa.cr', [Validators.required, Validators.email]],
     password: ['1234', [Validators.required]]
   });
 

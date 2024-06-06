@@ -15,7 +15,6 @@ import { ConfirmDialogComponent } from 'src/app/patient/components/confirm-dialo
 })
 export class NewEquipmentPageComponent implements OnInit {
 
-
   constructor(
     private fb: FormBuilder,
     private equipmentService: EquipmentService,
