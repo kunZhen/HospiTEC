@@ -18,6 +18,8 @@ import { ListProcedurePageComponent } from './pages/list-procedure-page/list-pro
 import { NewProcedurePageComponent } from './pages/new-procedure-page/new-procedure-page.component';
 import { ListStaffPageComponent } from './pages/list-staff-page/list-staff-page.component';
 import { NewStaffPageComponent } from './pages/new-staff-page/new-staff-page.component';
+import { ProcedureCardComponent } from './components/procedure-card/procedure-card.component';
+import { ProcedureImagePipe } from './pipes/procedure-image.pipe';
 
 
 @NgModule({
@@ -35,7 +37,9 @@ import { NewStaffPageComponent } from './pages/new-staff-page/new-staff-page.com
     ListProcedurePageComponent,
     NewProcedurePageComponent,
     ListStaffPageComponent,
-    NewStaffPageComponent
+    NewStaffPageComponent,
+    ProcedureCardComponent,
+    ProcedureImagePipe
   ],
   imports: [
     CommonModule,

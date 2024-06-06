@@ -524,6 +524,56 @@
       "cui": "No"
     }
   ],
+  "procedure": [
+    {
+      "id": "1",
+      "name": "Apendicectomía",
+      "description": "Cirugía para remover el apéndice.",
+      "duration": 5
+    },
+    {
+      "id": "2",
+      "name": "Biopsia de mama",
+      "description": "Procedimiento para obtener una muestra de tejido de la mama.",
+      "duration": 3
+    },
+    {
+      "id": "3",
+      "name": "Cirugía de cataratas",
+      "description": "Procedimiento para remover cataratas del ojo.",
+      "duration": 4
+    },
+    {
+      "id": "4",
+      "name": "Cesárea",
+      "description": "Cirugía para el nacimiento de un bebé a través del abdomen.",
+      "duration": 7
+    },
+    {
+      "id": "5",
+      "name": "Histerectomía",
+      "description": "Cirugía para remover el útero.",
+      "duration": 10
+    },
+    {
+      "id": "6",
+      "name": "Cirugía para la lumbalgia",
+      "description": "Procedimiento para tratar el dolor lumbar.",
+      "duration": 6
+    },
+    {
+      "id": "7",
+      "name": "Mastectomía",
+      "description": "Cirugía para remover uno o ambos senos.",
+      "duration": 8
+    },
+    {
+      "id": "8",
+      "name": "Amigdalectomía",
+      "description": "Procedimiento para remover las amígdalas.",
+      "duration": 5
+    }
+  ],
   "records": [
     {
       "id": "1",
