@@ -16,6 +16,10 @@ export class ListBedPageComponent implements OnInit {
     private bedService: BedService,
   ) { }
 
+  /**
+   * The ngOnInit function in TypeScript initializes the beds property by subscribing to the getBed
+   * method of the bedService.
+   */
   ngOnInit(): void {
     this.bedService.getBed().subscribe( bed => {
       this.beds = bed;
