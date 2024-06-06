@@ -20,6 +20,7 @@ import { ListStaffPageComponent } from './pages/list-staff-page/list-staff-page.
 import { NewStaffPageComponent } from './pages/new-staff-page/new-staff-page.component';
 import { ProcedureCardComponent } from './components/procedure-card/procedure-card.component';
 import { ProcedureImagePipe } from './pipes/procedure-image.pipe';
+import { PersonalCardComponent } from './components/personal-card/personal-card.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ProcedureImagePipe } from './pipes/procedure-image.pipe';
     ListStaffPageComponent,
     NewStaffPageComponent,
     ProcedureCardComponent,
-    ProcedureImagePipe
+    ProcedureImagePipe,
+    PersonalCardComponent
   ],
   imports: [
     CommonModule,
